@@ -1,0 +1,401 @@
+.furniture-page-revise {
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: minmax(100px, auto);
+      grid-gap: 27px;
+      padding-inline: 84px;
+    }
+  
+    .grid-item {
+      background-color: #ccc;
+      text-align: center;
+      height: 396px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+  
+    @media screen and (max-width: 600px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+  
+  .content-container {
+    width: 83%;
+    height: 100%;
+    margin-top: 91px;
+    font-family: 'poppins';
+
+    display: flex;
+    flex-direction: column;
+
+    .subtitle {
+        color: #669286;
+        font-size: 28px;
+        font-weight: 500;
+    }
+
+    .breadcrumb{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 10px;
+
+        margin: 2% 0; 
+
+        .link1 {
+            color: #9F9F9F;
+            font-size: 20px;
+        }
+
+        .bread-name {
+            color: #2E5A52;
+            font-size: 20px;
+        }
+    }
+
+    .highlight-content{
+        display: flex;
+
+        .vectary-left-container {
+            width: 50%;
+        }
+
+        .right-container {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+
+            padding-left: 5%;
+            gap: 20px;
+
+            .furni-name {
+                color: #3B5D50;
+                font-size: 45px;
+                font-weight: 600;
+
+                margin-top: -4vw;
+            }
+
+            .text-format {
+                display: grid;
+                margin-top: 20px;
+                width: 78%;
+                grid-template-columns: 200px 1fr;
+
+                gap: 15%;
+
+                .key {
+                    grid-column: 1/2;
+                    font-weight: 500;
+                }
+
+                .value {
+                    grid-column: 2/3;
+                }
+            }
+        }
+
+    }
+
+    .desc-content {
+        margin-top: 59px;
+        font-weight: 600;
+
+        .underline {
+            margin-top: 10px;
+            background-color: #73976B;
+            height: 4px;
+            width: 156px;
+        }
+
+        .desc-para {
+            text-align: justify;
+            color: grey; 
+            margin-top: 40px;
+            font-weight: 400;
+        }
+    }
+  }
+  
+  .furniture-page-revise .nav {
+      align-items: center;
+      border-bottom: 0.8px solid #858585;
+      background: rgba(212, 222, 210, 1);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 10px 79px 10px 57px;
+      width: 100%;
+      max-width: 1920px; // Menggunakan lebar 100% agar sesuai dengan lebar layar
+      height: fit-content;
+      box-sizing: border-box;
+      transition: top 0.3s; // Efek transisi ketika navbar bergeser
+      position: fixed;
+      top: 0;
+      width: 100vw;
+      max-width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000; /* Pastikan navbar selalu berada di atas konten */
+  }
+  
+  .line-1 {
+      background: #73976b;
+      margin: 0 0 0 10px;
+      width: 100%;
+      max-width: 1920px;
+      height: 5px;
+  }
+  .furniture-page-revise {
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      box-sizing: border-box;
+  }
+  .furniture-page-revise .home-page-3-footer {
+      background: #ffffff;
+      position: absolute;
+      justify-content: center;
+      top: 2300px;
+      left: 0px;
+      right: 0px;
+      width: 100%;
+      margin: 0;
+      height: fit-content;
+  }
+  .furniture-page-revise .footer {
+      background: #ffffff;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 31px 32.6px 41px 36px;
+      width: 100%;
+      height: fit-content;
+      box-sizing: border-box;
+  }
+  .furniture-page-revise .furniture-items {
+      position: relative;
+      margin: 80px 0 80px 0;
+      left: 0;
+      width: 100%;
+      align-items: center;
+      overflow-wrap: break-word;
+      font-family: "Poly";
+      text-align: center;
+      font-weight: 400;
+      font-size: 35px;
+      color: #2e5a52;
+  }
+  
+  .furniture-page-revise .ex-ineed-awhite-chair {
+      margin: 12px 21px 13px 30px;
+      display: inline-block;
+      width: 560.9px;
+      overflow-wrap: break-word;
+      font-family: "Poppins";
+      font-weight: 400;
+      font-size: 22px;
+      color: rgba(0, 0, 0, 0.46);
+  }
+  .inputsearch {
+      border: none;
+      outline: "none";
+      margin: 18px 21px 13px 20px;
+      display: inline-block;
+      width: 635.9px;
+      overflow-wrap: break-word;
+      font-family: "Poppins";
+      font-weight: 400;
+      font-size: 28px;
+      color: rgba(0, 0, 0, 0.46);
+      border: none;
+      outline: none;
+  }
+  .landing {
+      top: 87px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: fit-content;
+      box-sizing: border-box;
+  }
+  .container-top {
+      position: relative;
+      aspect-ratio: 1920/1920;
+      background: url("../assets/bg-landing.webp") center/cover no-repeat;
+      background-position: center 44%;
+      filter: brightness(0.85);
+      top: 4px;
+      width: 100%;
+      height: 90vh;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-sizing: border-box;
+  }
+  .furniture-page-revise .dive-into-your-needs {
+      color: white;
+      width: 100%;
+      margin: 100px 0 100px 0;
+      display: flex;
+      flex-direction: row;
+      overflow-wrap: break-word;
+      font-family: "Poppins";
+      justify-content: center;
+      font-weight: 600;
+      font-size: 48px;
+  }
+  .group-252 {
+      z-index: 1;
+      display: flex;
+      position: fixed;
+      flex-direction: row;
+      justify-content: center;
+      scroll-margin: 87px;
+      width: 100%;
+      bottom: 25%;
+      height: fit-content;
+  }
+  
+  .furniture-page-revise .home {
+      margin: 17px 0 14px 0;
+      display: inline-block;
+      overflow-wrap: break-word;
+      font-family: "poppins";
+      font-weight: 400;
+      font-size: 20px;
+      color: #3b5d50;
+  }
+  .furniture-page-revise .recommendation {
+      margin: 17px 0 14px 0;
+      display: inline-block;
+      overflow-wrap: break-word;
+      font-family: "poppins";
+      font-weight: 400;
+      font-size: 20px;
+      color: #3b5d50;
+  }
+  .furniture-page-revise .furniture {
+      margin: 0 0 0 10px;
+      display: inline-block;
+      overflow-wrap: break-word;
+      font-family: "poppins";
+      font-weight: 400;
+      font-size: 20px;
+      color: #3b5d50;
+  }
+  .furniture-page-revise .about {
+      margin: 17px 0 14px 0;
+      display: inline-block;
+      overflow-wrap: break-word;
+      font-family: "poppins";
+      font-weight: 400;
+      font-size: 20px;
+      color: #3b5d50;
+  }
+  
+  // LOGO NAV ==========================================================
+  .furniture-page-revise .elegant-logo-2 {
+      background: url("../assets/pc_logo_long_1.webp") 50% / contain no-repeat;
+      width: 172px;
+      height: 70px;
+  }
+  
+  // SEARCH BAR =========================================================
+  
+  .search-bar {
+      position: sticky;
+      top: 87px;
+      z-index: 1000;
+      background-color: white;
+      border-radius: 34px;
+      margin: 0 50%;
+      border: 1px solid #3b5d50;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: fit-content;
+      box-sizing: border-box;
+      opacity: 1;
+      transition: opacity 0.3s ease; /* Transition for opacity */
+  }
+  
+  .search-bar.hidden {
+      opacity: 0;
+      pointer-events: none; /* Hide pointer events when hidden */
+  }
+  
+  // FOOTER =============================================================
+  
+  // Footer Container
+  .furniture-page-revise .container-6 {
+    margin-right: 9.7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .furniture-page-revise .footer-furni-fit {
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+  }
+  .furniture-page-revise .furni-fit {
+    margin-bottom: 6px;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: "poppins";
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.2px;
+    line-height: 1.4;
+    color: #73976b;
+  }
+  .furniture-page-revise .all-rights-reserved {
+    overflow-wrap: break-word;
+    font-family: "poppins";
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.2px;
+    line-height: 1.4;
+    color: #73976b;
+  }
+  .furniture-page-revise .vector-5 {
+    background: #73976b;
+    margin-bottom: 24px;
+    width: 100%;
+    height: 1px;
+  }
+  .furniture-page-revise .nav-footer {
+    margin: 14px 0px 17px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  .furniture-page-revise .about-us {
+    overflow-wrap: break-word;
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.2px;
+    line-height: 1.4;
+    color: #73976b;
+    cursor: pointer;
+  }
+  

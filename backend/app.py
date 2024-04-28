@@ -292,5 +292,18 @@ def searchbar():
     recommended_products = matching_rows.to_dict(orient='records')
     return jsonify(recommended_products)
 
+
+# ROUTE GET Data to Targeted Page
+@app.route('/api/furniture/<furni_id>', methods=['GET'])
+def get_furniture_by_id(furni_id):
+    furniture = collection.find_one(
+            {'furni_id': furni_id},
+            {'_id': False}
+        )
+    if furniture:
+        return jsonify(furniture)
+    else:
+        return jsonify({'error': 'Furniture not found'}), 404
+
 if __name__ == "__main__":
     app.run(debug=True)
