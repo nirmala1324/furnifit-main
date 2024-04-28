@@ -9,6 +9,8 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions, Popper } from "@mui/material";
 import Pagination from "@mui/material/Pagination";
+import { useNavigate } from "react-router-dom";
+
 
 const LandingPage = () => {
 
@@ -16,6 +18,8 @@ const LandingPage = () => {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const itemsPerPage = 12;
+
+  const navigate = useNavigate();
 
 
   // HANDLE PAGINATION =========================================================
@@ -139,7 +143,7 @@ const LandingPage = () => {
           </div>
           
         {/* Pagination */}
-        <div style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}>
+        <div style={{ display: "flex", justifyContent: "center", marginTop: "60px" }}>
           <Pagination count={totalPages} page={page} onChange={handlePageChange} />
         </div>
         </div>
@@ -154,7 +158,7 @@ const LandingPage = () => {
                 </span>
               </div>
               <div className="nav-footer">
-                <span className="about-us">About Us</span>
+                <span className="about-us" onClick={() => navigate("/about-us")} >About Us</span>
               </div>
             </div>
           </div>
