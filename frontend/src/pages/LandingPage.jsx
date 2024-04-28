@@ -17,6 +17,8 @@ const LandingPage = () => {
   const [totalPages, setTotalPages] = useState(1);
   const itemsPerPage = 12;
 
+
+  // HANDLE PAGINATION =========================================================
   
   const limitedData = data.slice(0, 12);
 
@@ -38,6 +40,44 @@ const LandingPage = () => {
     setPage(value);
   };
 
+
+  // HANDLE SCROLL SEARCH BAR ====================================================
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [isSearchBarVisible, setIsSearchBarVisible] = useState(true);
+
+  // Inside LandingPage component
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentPosition = window.scrollY;
+  
+      if (currentPosition > scrollPosition && currentPosition > 156) {
+        // Scrolling down, hide the search bar
+        setIsSearchBarVisible(false);
+      } else if (currentPosition < 156) {
+        // At the top of the page, show the search bar
+        setIsSearchBarVisible(true);
+      } else if (currentPosition < scrollPosition) {
+        // Scrolling up, but not yet reached the top, show the search bar if previously hidden
+        if (!isSearchBarVisible) {
+          setIsSearchBarVisible(false);
+        }
+      }
+  
+      // Update the scroll position
+      setScrollPosition(currentPosition);
+    };
+  
+    // Attach the scroll event listener when the component mounts
+    window.addEventListener("scroll", handleScroll);
+  
+    // Remove the scroll event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrollPosition, isSearchBarVisible]);
+  
+
+
   return (
     <>
       <div className="furniture-page-revise">
@@ -56,10 +96,10 @@ const LandingPage = () => {
         </div>
         <div className="landing">
           <div className="container-top">
-            <div className="dive-into-your-needs">Dive into your needs</div>
+            <div className="dive-into-your-needs">Dive into yo ur needs</div>
           </div>
-          <div className="group-252">
-            <div className="search-bar">
+          <div className='group-252'>
+            <div className={`search-bar ${isSearchBarVisible ? '' : 'hidden'}`}>
               <input
                 className="ex-ineed-awhite-chair inputsearch"
                 type="text"
@@ -69,7 +109,7 @@ const LandingPage = () => {
             </div>
           </div>
           <span className="furniture-items">Furniture Items</span>
-          <div class="grid-container">
+          <div className="grid-container">
           {limitedData.map((item) => (
             <div key={item.furni_id} class="grid-item">
               <Card sx={{ maxWidth: 345, minHeight: 400, backgroundColor: "#D9E2D7" }}>
