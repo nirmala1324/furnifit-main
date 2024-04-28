@@ -43,14 +43,26 @@ collection = db['furnitures']
 
 # ================ GET DATA FROM DATABASE ======================
 
-# API route to retrieve all data from the collection
 @app.route('/api/furnitures', methods=['GET'])
-def get_all_furnitures():
-    # Retrieving all documents from the collection
-    all_furniture_data = list(collection.find({}, {'_id': False, 'furni_id': True, 'furni_name': True, 'furni_type': True, 'space_cat': True, 'furni_picture': True}).limit(12))
+def get_furnitures():
+    page = int(request.args.get('page', 1))  # Get the page number from the query parameter, default to 1
+    per_page = 12  # Number of items per page
+
+    # Calculate the starting index and ending index for pagination
+    start_index = (page - 1) * per_page
+    end_index = start_index + per_page
+
+    # Retrieve a slice of documents from the collection
+    furniture_data = list(collection.find({}, {'_id': False, 'furni_id': True, 'furni_name': True, 'furni_type': True, 'space_cat': True, 'furni_picture': True}).skip(start_index).limit(per_page))
     
-    # Returning the documents as JSON
-    return jsonify(all_furniture_data)
+    # Count total number of items in the collection
+    total_items = collection.count_documents({})
+
+    # Returning the documents and total items as JSON
+    return jsonify({
+        'furnitureData': furniture_data,
+        'totalItems': total_items
+    })
 
 
 

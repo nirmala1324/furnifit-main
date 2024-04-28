@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "../styles/landing_page.scss";
+import axios from 'axios';
 
 // IMPORT CARDS
 import Card from "@mui/material/Card";
@@ -7,10 +8,35 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions, Popper } from "@mui/material";
+import Pagination from "@mui/material/Pagination";
 
-const LandingPage = ({data}) => {
+const LandingPage = () => {
 
+  const [data, setData] = useState([]);
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const itemsPerPage = 12;
+
+  
   const limitedData = data.slice(0, 12);
+
+  useEffect(() => {
+    fetchData();
+  }, [page]);
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(`/api/furnitures?page=${page}`);
+      setData(response.data.furnitureData);
+      setTotalPages(Math.ceil(response.data.totalItems / itemsPerPage));
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  const handlePageChange = (event, value) => {
+    setPage(value);
+  };
 
   return (
     <>
@@ -71,6 +97,11 @@ const LandingPage = ({data}) => {
               </Card>
             </div>))}
           </div>
+          
+        {/* Pagination */}
+        <div style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}>
+          <Pagination count={totalPages} page={page} onChange={handlePageChange} />
+        </div>
         </div>
         <div className="home-page-3-footer">
           <div className="footer">
