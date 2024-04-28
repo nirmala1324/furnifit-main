@@ -47,7 +47,7 @@ collection = db['furnitures']
 @app.route('/api/furnitures', methods=['GET'])
 def get_all_furnitures():
     # Retrieving all documents from the collection
-    all_furniture_data = list(collection.find({}, {'_id': False}).limit(20))
+    all_furniture_data = list(collection.find({}, {'_id': False, 'furni_id': True, 'furni_name': True, 'furni_type': True, 'space_cat': True, 'furni_picture': True}).limit(12))
     
     # Returning the documents as JSON
     return jsonify(all_furniture_data)
@@ -269,7 +269,7 @@ def search_products(user_query):
     matching_rows_sorted = matching_rows_sorted.drop_duplicates()
     data = matching_rows_sorted['id']
 
-    return data.head(20)
+    return data.head(12)
 
 # Route for recommendation
 @app.route('/search', methods=['POST'])

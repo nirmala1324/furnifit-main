@@ -11,7 +11,7 @@ import LandingPage from "./pages/LandingPage";
 import ErrorPage from "./pages/ErrorPage";
 
 function App() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<LandingPage data={data} />} />
         <Route path="/trialApiRoute" element={<AboutUsPage data={data} />} />
         <Route path="/about-us" element={<AboutUsPage />} />
         <Route path="/*" element={<ErrorPage />} />
