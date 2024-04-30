@@ -45,7 +45,7 @@ const DetailFurniPage = () => {
           </div>
           <div className="content-container">
             <div className="breadcrumb">
-              <p className="link1">Furniture</p>
+              <p className="link1" onClick={() => navigate("/furniture-page")}>Furniture</p>
               <ArrowForwardIosIcon sx={{ fontSize: 20 }} />
               <p className="bread-name">{furnitureData.furni_name}</p>
             </div>

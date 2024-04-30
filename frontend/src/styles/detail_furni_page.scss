@@ -65,6 +65,7 @@
 
     .link1:hover {
       text-decoration: underline;
+      cursor: pointer;
     }
 
     .bread-name {
@@ -199,6 +200,7 @@
       color: grey;
       margin-top: 40px;
       font-weight: 400;
+      margin-bottom: 75px;
 
       @include mobileStyles {
         margin-bottom: 45px;
@@ -289,7 +291,7 @@
 .furniture-page-revise .ex-ineed-awhite-chair {
   margin: 12px 21px 13px 30px;
   display: inline-block;
-  width: 208.9px;
+  width: 512.9px;
   overflow-wrap: break-word;
   font-family: "Poppins";
   font-weight: 400;
@@ -370,7 +372,7 @@
   justify-content: center;
   scroll-margin: 87px;
   width: 100%;
-  bottom: 25%;
+  bottom: 27%;
   height: fit-content;
 
   @include mobileStyles {

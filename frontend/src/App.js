@@ -11,6 +11,7 @@ import LandingPage from "./pages/LandingPage";
 import ErrorPage from "./pages/ErrorPage";
 import FurnituresPage from "./pages/FurniturePage";
 import DetailFurniPage from "./pages/DetailFurniPage";
+import { RecommendPage } from "./pages/RecommendPage";
 
 function App() {
   const [data, setData] = useState([]);
@@ -39,6 +40,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/trialApiRoute" element={<AboutUsPage />} />
         <Route path="/about-us" element={<AboutUsPage />} />
+        <Route path="/recommendation" element={<RecommendPage />} />
         <Route path="/furniture-page" element={<FurnituresPage />} />
         <Route path="/detail-furniture/:furni_id" element={<DetailFurniPage />} />
         <Route path="/*" element={<ErrorPage />} />
