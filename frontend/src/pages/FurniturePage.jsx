@@ -104,7 +104,7 @@ const FurnituresPage = () => {
         </div>
         <div className="landing">
           <div className="container-top">
-            <div className="dive-into-your-needs">Dive into yo ur needs</div>
+            <div className="dive-into-your-needs">Dive into your needs</div>
           </div>
           <div className='group-252'>
             <div className={`search-bar ${isSearchBarVisible ? '' : 'hidden'}`}>
@@ -147,7 +147,7 @@ const FurnituresPage = () => {
           </div>
           
         {/* Pagination */}
-        <div style={{ display: "flex", justifyContent: "center", marginTop: "60px" }}>
+        <div style={{ display: "flex", justifyContent: "center", marginTop: "60px", marginBottom: "114px"}}>
           <Pagination count={totalPages} page={page} onChange={handlePageChange} />
         </div>
         </div>

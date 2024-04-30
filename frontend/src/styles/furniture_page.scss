@@ -1,3 +1,6 @@
+@use "../utilities//functions.scss" as func;
+@import "../utilities/mixins.scss";
+
 .furniture-page-revise {
   .grid-container {
     display: grid;
@@ -64,7 +67,6 @@
 }
 .furniture-page-revise .home-page-3-footer {
     background: #ffffff;
-    position: absolute;
     justify-content: center;
     top: 2300px;
     left: 0px;
@@ -101,7 +103,7 @@
 .furniture-page-revise .ex-ineed-awhite-chair {
     margin: 12px 21px 13px 30px;
     display: inline-block;
-    width: 560.9px;
+    width: 208.9px;
     overflow-wrap: break-word;
     font-family: "Poppins";
     font-weight: 400;
@@ -140,7 +142,7 @@
     filter: brightness(0.85);
     top: 4px;
     width: 100%;
-    height: 90vh;
+    height: 92vh;
     left: 0;
     display: flex;
     flex-direction: column;
@@ -176,36 +178,56 @@
     display: inline-block;
     overflow-wrap: break-word;
     font-family: "poppins";
-    font-weight: 400;
+    font-weight: 600;
     font-size: 20px;
     color: #3b5d50;
+
+    
+    @include mobileStyles {
+      display: none;
+    }
 }
 .furniture-page-revise .recommendation {
     margin: 17px 0 14px 0;
     display: inline-block;
     overflow-wrap: break-word;
     font-family: "poppins";
-    font-weight: 400;
+    font-weight: 600;
     font-size: 20px;
     color: #3b5d50;
+
+    
+    @include mobileStyles {
+      display: none;
+    }
 }
 .furniture-page-revise .furniture {
     margin: 0 0 0 10px;
     display: inline-block;
     overflow-wrap: break-word;
     font-family: "poppins";
-    font-weight: 400;
+    font-weight: 600;
     font-size: 20px;
     color: #3b5d50;
+
+    
+    @include mobileStyles {
+      display: none;
+    }
 }
 .furniture-page-revise .about {
     margin: 17px 0 14px 0;
     display: inline-block;
     overflow-wrap: break-word;
     font-family: "poppins";
-    font-weight: 400;
+    font-weight: 600;
     font-size: 20px;
     color: #3b5d50;
+
+    
+    @include mobileStyles {
+      display: none;
+    }
 }
 
 // LOGO NAV ==========================================================
@@ -292,7 +314,7 @@
 }
 .furniture-page-revise .about-us {
   overflow-wrap: break-word;
-  font-family: "Roboto";
+  font-family: "Poppins";
   font-weight: 700;
   font-size: 20px;
   letter-spacing: 0.2px;

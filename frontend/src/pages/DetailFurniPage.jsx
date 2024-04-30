@@ -13,8 +13,6 @@ const DetailFurniPage = () => {
   const { furni_id } = useParams();
   const [furnitureData, setFurnitureData] = useState({});
 
-  console.log(furni_id);
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -28,8 +26,6 @@ const DetailFurniPage = () => {
     fetchData();
   }, [furni_id]);
 
-  console.log(furnitureData);
-
   return (
     <>
       {Object.keys(furnitureData).length > 0 ? (
@@ -39,7 +35,7 @@ const DetailFurniPage = () => {
             <div className="home">Home</div>
             <div className="recommendation">Recommendation</div>
             <div className="container-line">
-              <div className="furniture">Furniture</div>
+              <div className="furniture" onClick={() => navigate("/furniture-page")}>Furniture</div>
               <div className="group-229">
                 <div className="line-1"></div>
               </div>
@@ -54,48 +50,51 @@ const DetailFurniPage = () => {
               <p className="bread-name">{furnitureData.furni_name}</p>
             </div>
             <div className="highlight-content">
+              <div className="title-container">
+                <div className="furni-name">{furnitureData.furni_name}</div>
+              </div>
               <div className="vectary-left-container">
                 <iframe
                   id="d6c1f27d-6a27-4c7e-bd7d-bd19d7faa56c"
                   src={furnitureData.vectary_link}
                   frameborder="0"
                   width="100%"
-                  height="560"
+                  height="100%"
                 />
               </div>
               <div className="right-container">
-                <div className="furni-name">{furnitureData.furni_name}</div>
+                <div className="furni-name-scnd">{furnitureData.furni_name}</div>
                 <div className="furni-subspace subtitle">
                   {furnitureData.space_cat}
                 </div>
                 <div className="text-format">
-                  <div className="key">Sub Space Category</div>
-                  <div className="value">
+                  <div className="key div1">Sub Space Category</div>
+                  <div className="value div2">
                     : &nbsp;&nbsp;{furnitureData.sub_space_cat}
                   </div>
 
-                  <div className="key">Furniture Type</div>
-                  <div className="value">
+                  <div className="key div3">Furniture Type</div>
+                  <div className="value div4">
                     : &nbsp;&nbsp;{furnitureData.furni_type}
                   </div>
 
-                  <div className="key">Dimension</div>
-                  <div className="value">
+                  <div className="key div5">Dimension</div>
+                  <div className="value div6">
                     : &nbsp;&nbsp;{furnitureData.furni_dimension[0]} x{" "}
                     {furnitureData.furni_dimension[1]} x{" "}
                     {furnitureData.furni_dimension[2]} mm
                   </div>
 
-                  <div className="key">Style</div>
-                  <div className="value">
+                  <div className="key div7">Style</div>
+                  <div className="value div8">
                     : &nbsp;&nbsp;{furnitureData.furni_style}
                   </div>
 
-                  <div className="key">Material Tag</div>
-                  <div className="value">
+                  <div className="key div9">Material Tag</div>
+                  <div className="value div10">
                     : &nbsp;&nbsp;
                     {furnitureData.material_tag.map((tag, index) => (
-                      <Chip key={index} label={tag} />
+                      <Chip key={index} label={tag} style={{marginRight: "3px"}} />
                     ))}
                   </div>
                 </div>
@@ -107,7 +106,7 @@ const DetailFurniPage = () => {
               <div className="desc-para">{furnitureData.furni_desc}</div>
             </div>
           </div>
-          <div className="home-page-3-footer">
+          <div className="detail-footer">
             <div className="footer">
               <div className="vector-5"></div>
               <div className="container-6">
