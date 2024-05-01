@@ -105,9 +105,15 @@ def recommend():
     keywords = keywords.lower()  # Convert keywords to lower case
     recommended_products = recommend_product_names(keywords)
     
-    print(keywords)
     print(recommended_products)
-    return jsonify({"recommended_products": recommended_products})
+    
+    # Fetch data for each recommended product
+    recommended_data = []
+    for product in recommended_products:
+        product_data = list(collection.find({'furni_id': product}, {'_id': False, 'furni_id': True, 'furni_name': True, 'furni_type': True, 'space_cat': True, 'furni_picture': True}))
+        recommended_data.extend(product_data)
+    
+    return jsonify({"recommended_products": recommended_data})
 
 
 # ================ SEARCH BAR ========================

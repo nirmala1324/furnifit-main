@@ -120,15 +120,16 @@ const FurnituresPage = () => {
           <div className="grid-container">
           {limitedData.map((item) => (
             <div key={item.furni_id} class="grid-item" onClick={() => handleCardClick(item.furni_id)}>
-              <Card sx={{ maxWidth: 345, minHeight: 400, backgroundColor: "#D9E2D7" }}>
+              <Card sx={{ maxWidth: '100%', minHeight: 400, backgroundColor: "#D9E2D7" }}>
                 <CardActionArea>
                   <CardMedia
                     component="img"
                     height="284"
                     image={item.furni_picture.url}
                     alt="green iguana"
+                    width= "100%"
                   />
-                  <CardContent style={{display: "flex", justifyContent: "space-between", alignItems: "center", height: "100%", marginTop: 8}}>
+                  <CardContent style={{display: "flex", justifyContent: "space-between", alignItems: "center", height: "100%", marginTop: 8, width: "89%"}}>
                     <Typography gutterBottom style={{fontFamily: "poppins", fontWeight: "600", fontSize: "16px", maxWidth: "170px"}} variant="h5" component="div">
                     {item.furni_name}
                     </Typography>
