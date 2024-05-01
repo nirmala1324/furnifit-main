@@ -83,7 +83,7 @@ def preprocess_text(text):
     return " ".join(tokens)
 
 # Function to recommend product names based on descriptions
-def recommend_product_names(user_input, n=20):
+def recommend_product_names(user_input, n=12):
     preprocessed_query = preprocess_text(user_input)  # Preprocess query
     user_input_vector = vectorizer.transform([preprocessed_query])  # Calculates TF-IDF for input user
     similarities = cosine_similarity(user_input_vector, tags_tfidf_matrix)  # Calculating similarity with cosine similarity
@@ -95,17 +95,18 @@ def recommend_product_names(user_input, n=20):
 @app.route('/recommend', methods=['POST'])
 def recommend():
     data = request.json
-    input_space_category = data.get("space_category", "")
-    input_subspace_category = data.get("room_category", "")
-    input_product = data.get("product_type", "")
-    input_material = data.get("material_type", "")
-    input_style = data.get("style_type", "")
-    input_color = data.get("furniture_color", "")
+    input_space_category = ' '.join(data['inputData']['space_category'])
+    input_subspace_category = ' '.join(data['inputData']['sub_space_category'])
+    input_product = ' '.join(data['inputData']['furni_type'])
+    input_material = ' '.join(data['inputData']['furni_material'])
+    input_style = ' '.join(data['inputData']['furni_style'])
     
-    keywords = input_space_category + " " + input_subspace_category + " " + input_product + " " + input_material + " " + input_style + " " + input_color
+    keywords =  input_space_category + " " + input_subspace_category + " " + input_product + " " + input_material + " " + input_style 
     keywords = keywords.lower()  # Convert keywords to lower case
     recommended_products = recommend_product_names(keywords)
     
+    print(keywords)
+    print(recommended_products)
     return jsonify({"recommended_products": recommended_products})
 
 

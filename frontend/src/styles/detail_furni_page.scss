@@ -159,6 +159,11 @@
         grid-template-columns: 180px 1fr;
 
         gap: 15%;
+        font-size: 17px;
+
+        .key {
+          font-weight: 600;
+        }
 
         @include mobileStyles {
           grid-template-columns: repeat(17, 1fr);
@@ -166,6 +171,7 @@
           grid-column-gap: 0;
           grid-row-gap: 20px;
 
+          font-size: 15px;
           
 
         .div1 { grid-area: 1 / 1 / 2 / 8; }
