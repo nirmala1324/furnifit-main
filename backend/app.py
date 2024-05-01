@@ -296,8 +296,21 @@ def searchbar():
     data = request.json
     user_query = data.get("user_query", "")
     matching_rows = search_products(user_query)
-    recommended_products = matching_rows.to_dict(orient='records')
-    return jsonify(recommended_products)
+    recommended_products = matching_rows.to_frame().to_dict(orient='records')
+    the_result = []
+    
+    # Get list of furniture data (only)
+    for data in recommended_products:
+        the_result.append(data['id'])
+    print(the_result)
+    
+    # Fetch data for each recommended product from database
+    recommended_data = []
+    for product in the_result:
+        product_data = list(collection.find({'furni_id': product}, {'_id': False, 'furni_id': True, 'furni_name': True, 'furni_type': True, 'space_cat': True, 'furni_picture': True}))
+        recommended_data.extend(product_data)
+        
+    return jsonify(recommended_data)
 
 
 # ROUTE GET Data to Targeted Page

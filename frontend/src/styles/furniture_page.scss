@@ -26,241 +26,262 @@
   }
 }
 
-
 .furniture-page-revise .nav {
-    align-items: center;
-    border-bottom: 0.8px solid #858585;
-    background: rgba(212, 222, 210, 1);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px 79px 10px 57px;
-    width: 100%;
-    max-width: 1920px; // Menggunakan lebar 100% agar sesuai dengan lebar layar
-    height: fit-content;
-    box-sizing: border-box;
-    transition: top 0.3s; // Efek transisi ketika navbar bergeser
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    max-width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000; /* Pastikan navbar selalu berada di atas konten */
+  align-items: center;
+  border-bottom: 0.8px solid #858585;
+  background: rgba(212, 222, 210, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 79px 10px 57px;
+  width: 100%;
+  max-width: 1920px; // Menggunakan lebar 100% agar sesuai dengan lebar layar
+  height: fit-content;
+  box-sizing: border-box;
+  transition: top 0.3s; // Efek transisi ketika navbar bergeser
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  max-width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000; /* Pastikan navbar selalu berada di atas konten */
 }
 
 .line-1 {
-    background: #73976b;
-    margin: 0 0 0 10px;
-    width: 100%;
-    max-width: 1920px;
-    height: 5px;
+  background: #73976b;
+  margin: 0 0 0 10px;
+  width: 100%;
+  max-width: 1920px;
+  height: 5px;
 }
 .furniture-page-revise {
-    background: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: fit-content;
-    box-sizing: border-box;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  box-sizing: border-box;
 }
 .furniture-page-revise .home-page-3-footer {
-    background: #ffffff;
-    justify-content: center;
-    position: relative;
-    top: 0;
-    left: 0px;
-    right: 0px;
-    width: 100%;
-    margin: 0;
-    height: fit-content;
+  background: #ffffff;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  margin: 0;
+  height: fit-content;
 }
 .furniture-page-revise .footer {
-    background: #ffffff;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 31px 32.6px 41px 36px;
-    width: 100%;
-    height: fit-content;
-    box-sizing: border-box;
+  background: #ffffff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 31px 32.6px 41px 36px;
+  width: 100%;
+  height: fit-content;
+  box-sizing: border-box;
 }
 .furniture-page-revise .furniture-items {
-    position: relative;
-    margin: 80px 0 80px 0;
-    left: 0;
-    width: 100%;
-    align-items: center;
-    overflow-wrap: break-word;
-    font-family: "Poly";
-    text-align: center;
-    font-weight: 400;
-    font-size: 35px;
-    color: #2e5a52;
+  position: relative;
+  margin: 80px 0 80px 0;
+  left: 0;
+  width: 100%;
+  align-items: center;
+  overflow-wrap: break-word;
+  font-family: "Poly";
+  text-align: center;
+  font-weight: 400;
+  font-size: 35px;
+  color: #2e5a52;
 }
 
 .furniture-page-revise .ex-ineed-awhite-chair {
-    margin: 12px 21px 13px 30px;
-    display: inline-block;
-    width: 560.9px;
-    overflow-wrap: break-word;
-    font-family: "Poppins";
-    font-weight: 400;
-    font-size: 22px;
-    color: rgba(0, 0, 0, 0.46);
+  margin: 12px 21px 13px 30px;
+  display: inline-block;
+  width: 560.9px;
+  overflow-wrap: break-word;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.46);
 }
+
+.furniture-page-revise .group {
+  width: 50px;
+  height: 50px;
+  background-color: #73976b;
+  position: absolute;
+  border-radius: 50%;
+  right: 0;
+  margin-right: 8px;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include mobileStyles {
+    width: 38px;
+    height: 38px;
+    margin-right: 6px;
+  }
+}
+
+.furniture-page-revise .group:hover {
+  background-color: #64865d;
+}
+
 .inputsearch {
-    border: none;
-    outline: "none";
-    margin: 18px 21px 13px 20px;
-    display: inline-block;
-    width: 635.9px;
-    overflow-wrap: break-word;
-    font-family: "Poppins";
-    font-weight: 400;
-    font-size: 28px;
-    color: rgba(0, 0, 0, 0.46);
-    border: none;
-    outline: none;
+  border: none;
+  outline: "none";
+  margin: 18px 21px 13px 20px;
+  display: inline-block;
+  width: 635.9px;
+  overflow-wrap: break-word;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 28px;
+  color: rgba(0, 0, 0, 0.46);
+  border: none;
+  outline: none;
 }
 .landing {
-    top: 87px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: fit-content;
-    box-sizing: border-box;
+  top: 87px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  box-sizing: border-box;
 }
 .container-top {
-    position: relative;
-    aspect-ratio: 1920/1920;
-    background: url("../assets/bg-landing.webp") center/cover no-repeat;
-    background-position: center 44%;
-    filter: brightness(0.85);
-    top: 4px;
-    width: 100%;
-    height: 92vh;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-sizing: border-box;
+  position: relative;
+  aspect-ratio: 1920/1920;
+  background: url("../assets/bg-landing.webp") center/cover no-repeat;
+  background-position: center 44%;
+  filter: brightness(0.85);
+  top: 4px;
+  width: 100%;
+  height: 92vh;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
 }
 .furniture-page-revise .dive-into-your-needs {
-    color: white;
-    width: 100%;
-    margin: 100px 0 100px 0;
-    display: flex;
-    flex-direction: row;
-    overflow-wrap: break-word;
-    font-family: "Poppins";
-    justify-content: center;
-    font-weight: 600;
-    font-size: 48px;
+  color: white;
+  width: 100%;
+  margin: 100px 0 100px 0;
+  display: flex;
+  flex-direction: row;
+  overflow-wrap: break-word;
+  font-family: "Poppins";
+  justify-content: center;
+  font-weight: 600;
+  font-size: 48px;
 }
 .group-252 {
-    z-index: 1;
-    display: flex;
-    position: fixed;
-    flex-direction: row;
-    justify-content: center;
-    scroll-margin: 87px;
-    width: 100%;
-    bottom: 25%;
-    height: fit-content;
+  z-index: 1;
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  justify-content: center;
+  scroll-margin: 87px;
+  width: 100%;
+  bottom: 25%;
+  height: fit-content;
 }
 
 .furniture-page-revise .home {
-    margin: 17px 0 14px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: "poppins";
-    font-weight: 600;
-    font-size: 20px;
-    color: #3b5d50;
+  margin: 17px 0 14px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: "poppins";
+  font-weight: 600;
+  font-size: 20px;
+  color: #3b5d50;
 
-    
-    @include mobileStyles {
-      display: none;
-    }
+  @include mobileStyles {
+    display: none;
+  }
 }
 .furniture-page-revise .recommendation {
-    margin: 17px 0 14px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: "poppins";
-    font-weight: 600;
-    font-size: 20px;
-    color: #3b5d50;
+  margin: 17px 0 14px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: "poppins";
+  font-weight: 600;
+  font-size: 20px;
+  color: #3b5d50;
 
-    
-    @include mobileStyles {
-      display: none;
-    }
+  @include mobileStyles {
+    display: none;
+  }
 }
 .furniture-page-revise .furniture {
-    margin: 0 0 0 10px;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: "poppins";
-    font-weight: 600;
-    font-size: 20px;
-    color: #3b5d50;
+  margin: 0 0 0 10px;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: "poppins";
+  font-weight: 600;
+  font-size: 20px;
+  color: #3b5d50;
 
-    
-    @include mobileStyles {
-      display: none;
-    }
+  @include mobileStyles {
+    display: none;
+  }
 }
 .furniture-page-revise .about {
-    margin: 17px 0 14px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: "poppins";
-    font-weight: 600;
-    font-size: 20px;
-    color: #3b5d50;
+  margin: 17px 0 14px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: "poppins";
+  font-weight: 600;
+  font-size: 20px;
+  color: #3b5d50;
 
-    
-    @include mobileStyles {
-      display: none;
-    }
+  @include mobileStyles {
+    display: none;
+  }
 }
 
 // LOGO NAV ==========================================================
 .furniture-page-revise .elegant-logo-2 {
-    background: url("../assets/pc_logo_long_1.webp") 50% / contain no-repeat;
-    width: 172px;
-    height: 70px;
+  background: url("../assets/pc_logo_long_1.webp") 50% / contain no-repeat;
+  width: 172px;
+  height: 70px;
 }
 
 // SEARCH BAR =========================================================
 
 .search-bar {
-    position: sticky;
-    top: 87px;
-    z-index: 1000;
-    background-color: white;
-    border-radius: 34px;
-    margin: 0 50%;
-    border: 1px solid #3b5d50;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: fit-content;
-    box-sizing: border-box;
-    opacity: 1;
-    transition: opacity 0.3s ease; /* Transition for opacity */
+  position: sticky;
+  top: 87px;
+  z-index: 1000;
+  background-color: white;
+  border-radius: 34px;
+  margin: 0 50%;
+  border: 1px solid #3b5d50;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  box-sizing: border-box;
+  opacity: 1;
+  transition: opacity 0.3s ease; /* Transition for opacity */
 }
 
 .search-bar.hidden {
-    opacity: 0;
-    pointer-events: none; /* Hide pointer events when hidden */
+  opacity: 0;
+  pointer-events: none; /* Hide pointer events when hidden */
 }
 
 // FOOTER =============================================================
@@ -275,9 +296,9 @@
   box-sizing: border-box;
 }
 .furniture-page-revise .footer-furni-fit {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 .furniture-page-revise .furni-fit {
   margin-bottom: 6px;

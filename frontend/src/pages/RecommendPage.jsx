@@ -235,14 +235,14 @@ const ChipModal = ({ open, handleClose, receiveRecommendData }) => {
           </div>
         </div>
       </DialogContent>
-      <DialogActions sx={{padding: 2}}>
-        <Button onClick={handleClose} color="error" variant="contained">
+      <DialogActions sx={{padding: 2}} style={{justifyContent: "center"}}>
+        <Button onClick={handleClose} color="mainRed" variant="contained" style={{borderRadius: '10px', color: 'white'}}>
           Cancel
         </Button>
-        <Button onClick={handleResetChips} color="secondary" variant="contained">
+        <Button onClick={handleResetChips} color="mainGrey" variant="contained" style={{borderRadius: '10px', color: 'white'}}>
           Reset
         </Button>
-        <Button onClick={handleSubmit} color="primary" variant="contained">
+        <Button onClick={handleSubmit} color="mainGreen" variant="contained" style={{borderRadius: '10px', color: 'white'}}>
           Submit
         </Button>
       </DialogActions>
@@ -295,7 +295,6 @@ export const RecommendPage = () => {
 
   const handleFormSubmit = (fieldChips) => {
     console.log("Submitted:", fieldChips);
-    // You can perform additional actions here, such as sending the data to the backend
   };
 
   // HANDLE CLICK TO DETAIL FURNITURE
@@ -344,7 +343,9 @@ export const RecommendPage = () => {
           {/* RECOMMENDATION RESULTS */}
           <div className="result-container" ref={recommendedRef} id="recommended furniture">
             <div className="header-recommend">
+              <div className="inner-text">
               Recommended Furniture based on Your Preferences
+              </div>
             </div>
             <div className="the-result">
               <div>
@@ -353,7 +354,7 @@ export const RecommendPage = () => {
                   handleClose={handleCloseModal}
                   onSubmit={handleFormSubmit}
                   receiveRecommendData={receiveRecommendData}
-                  setRecommendData={setRecommendData} // Pass setRecommendData here
+                  setRecommendData={setRecommendData} 
                 />
 
                 <div className="grid-container">

@@ -11,18 +11,35 @@ import { Button, CardActionArea, CardActions, Popper } from "@mui/material";
 import Pagination from "@mui/material/Pagination";
 import { useNavigate } from "react-router-dom";
 
+// IMPORT ICONS
+import SearchIcon from '@mui/icons-material/Search';
+
 const FurnituresPage = () => {
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const itemsPerPage = 12;
 
+  const [ searchData, setSearchData ] = useState([]);
+  const [ conditionalData, setConditionalData ] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
   const navigate = useNavigate();
 
 
   // HANDLE PAGINATION =========================================================
   
-  const limitedData = data.slice(0, 12);
+  useEffect(() => {
+    const limitedData = data.slice(0, 12);
+    setConditionalData(limitedData);
+  }, [data]);
+
+  
+  useEffect(() => {
+    if (searchData.length > 0) {
+      scrollToSection();
+    }
+  }, [searchData]);
 
   useEffect(() => {
     fetchData();
@@ -40,6 +57,11 @@ const FurnituresPage = () => {
 
   const handlePageChange = (event, value) => {
     setPage(value);
+  };
+
+  const scrollToSection = () => {
+    const furnitureItemsSection = document.querySelector(".furniture-items");
+    furnitureItemsSection.scrollIntoView({ behavior: "smooth" });
   };
 
 
@@ -85,6 +107,29 @@ const FurnituresPage = () => {
     // Redirect to the targeted page with the furni_id as a URL parameter
     navigate(`/detail-furniture/${furni_id}`);
   };
+
+  // HANDLE SEARCH BAR =================================================
+  const [searchValue, setSearchValue] = useState('');
+
+  const handleGroupClick = () => {
+    setIsLoading(true); // Set loading state to true when initiating search
+    
+    axios.post('/search', { user_query: searchValue })
+      .then(response => {
+        setSearchData(response.data)
+        setConditionalData(response.data); // Update conditionalData directly with the fetched search results
+        setIsLoading(false); // Set loading state to false after data is fetched
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        setIsLoading(false); // Set loading state to false if there's an error
+      });
+  };
+
+
+  const handleInputChange = (e) => {
+    setSearchValue(e.target.value);
+  };
   
   return (
     <>
@@ -111,14 +156,18 @@ const FurnituresPage = () => {
               <input
                 className="ex-ineed-awhite-chair inputsearch"
                 type="text"
-                placeholder="ex. I need a white chair" // Anda dapat menambahkan kelas CSS untuk styling
+                placeholder="ex. I need a white chair" 
+                onChange={handleInputChange} // Update searchValue state on input change
               />
-              <div className="group"></div>
+              <div className="group" onClick={handleGroupClick}><SearchIcon /></div>
             </div>
           </div>
           <span className="furniture-items">Furniture Items</span>
-          <div className="grid-container">
-          {limitedData.map((item) => (
+          <div className="grid-container"  style={{marginBottom: searchData.length !== 0 ? "116px" : ''}} >
+            {isLoading ? (
+              <div>Loading...</div>
+            ) : (
+          conditionalData.map((item) => (
             <div key={item.furni_id} class="grid-item" onClick={() => handleCardClick(item.furni_id)}>
               <Card sx={{ maxWidth: '100%', minHeight: 400, backgroundColor: "#D9E2D7" }}>
                 <CardActionArea>
@@ -126,7 +175,7 @@ const FurnituresPage = () => {
                     component="img"
                     height="284"
                     image={item.furni_picture.url}
-                    alt="green iguana"
+                    alt="Furniture Item"
                     width= "100%"
                   />
                   <CardContent style={{display: "flex", justifyContent: "space-between", alignItems: "center", height: "100%", marginTop: 8, width: "89%"}}>
@@ -144,13 +193,15 @@ const FurnituresPage = () => {
                   </CardContent>
                 </CardActionArea>
               </Card>
-            </div>))}
+            </div>)))}
           </div>
           
         {/* Pagination */}
-        <div style={{ display: "flex", justifyContent: "center", marginTop: "60px", marginBottom: "114px"}}>
-          <Pagination count={totalPages} page={page} onChange={handlePageChange} />
-        </div>
+        {searchData.length === 0 && (
+            <div style={{ display: "flex", justifyContent: "center", marginTop: "60px", marginBottom: "114px" }}>
+              <Pagination count={totalPages} page={page} onChange={handlePageChange} />
+            </div>
+          )}
         </div>
         <div className="home-page-3-footer">
           <div className="footer">
