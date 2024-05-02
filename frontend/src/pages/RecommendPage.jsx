@@ -17,7 +17,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 
-const ChipModal = ({ open, handleClose, receiveRecommendData }) => {
+const ChipModal = ({ open, handleClose, receiveRecommendData }) => { // Fungsi khusus untuk modal
   const [fieldChips, setFieldChips] = useState({
     space_category: [],
     sub_space_category: [],
@@ -57,7 +57,7 @@ const ChipModal = ({ open, handleClose, receiveRecommendData }) => {
       });
       const recommendData = response.data.recommended_products;
       console.log(recommendData);
-      receiveRecommendData(recommendData); // Call the callback function to pass data
+      receiveRecommendData(recommendData); // Dapet data respon -> dikirim ke fungsi utama
     } catch (error) {
       console.error("Error submitting data:", error);
     }
@@ -250,7 +250,7 @@ const ChipModal = ({ open, handleClose, receiveRecommendData }) => {
   );
 };
 
-export const RecommendPage = () => {
+export const RecommendPage = () => {    // Fungsi utama
   const navigate = useNavigate();
 
   const [modalOpen, setModalOpen] = useState(false);

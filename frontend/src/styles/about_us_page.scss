@@ -1,0 +1,511 @@
+@import url(https://fonts.googleapis.com/css2?family=Satisfy&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Buda:wght@300&family=Satisfy&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Buda:wght@300&family=Satisfy&display=swap);
+
+$color_1: #3b5d50;
+$color_2: #000000;
+$color_3: #ffffff;
+$color_4: #73976b;
+$font-family_1: "Bevan";
+$font-family_2: "Buda";
+$font-family_3: "Arapey";
+$font-family_4: "Satisfy";
+$font-family_5: "Abyssinica SIL";
+$font-family_6: "Roboto";
+
+.about-us-page {
+  .elegant-logo-2AU {
+    background: url("../assets/ElegantLogo2.webp") 50% / cover no-repeat;
+    width: 172px;
+    height: 70px;
+  }
+  .homeAU {
+    margin: 17px 0 14px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: $font-family_1;
+    font-weight: 400;
+    font-size: 24px;
+    text-decoration: none;
+    color: $color_1;
+  }
+  .recommendationAU {
+    margin: 17px 0 14px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: $font-family_1;
+    font-weight: 400;
+    font-size: 24px;
+    color: $color_1;
+    text-decoration: none;
+  }
+  .furnitureAU {
+    margin: 17px 0 14px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: $font-family_1;
+    font-weight: 400;
+    font-size: 24px;
+    color: $color_1;
+    text-decoration: none;
+  }
+  .aboutAU {
+    margin: 17px 0px 14px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: $font-family_1;
+    font-weight: 400;
+    font-size: 24px;
+    color: $color_1;
+    text-decoration: none;
+  }
+  .active {
+    border-bottom: 5px solid #73976b; /* Misalnya, garis bawah putih dengan lebar 2px */
+  }
+  .group-229 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 83px;
+    height: 5px;
+    box-sizing: border-box;
+  }
+  .container-4 {
+    margin: 17px 0 3px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .user-cicrle-duotone {
+    background: url("../assets/1.webp") 50% / cover no-repeat;
+    margin: 8px 0;
+    width: 55px;
+    height: 54px;
+  }
+  .group-230AU {
+    border-bottom: 0.8px solid #858585;
+    background: rgba(212, 222, 210, 0.71);
+    position: relative;
+    margin-bottom: 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 79px 10px 57px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .navAU {
+    border-bottom: 0.8px solid #858585;
+    background: rgba(212, 222, 210, 1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 150px 10px 57px;
+    width: 100%;
+    max-width: 1920px; // Menggunakan lebar 100% agar sesuai dengan lebar layar
+    height: fit-content;
+    box-sizing: border-box;
+    transition: top 0.3s; // Efek transisi ketika navbar bergeser
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    max-width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000; /* Pastikan navbar selalu berada di atas konten */
+  }
+
+  .image-30 {
+    background: url("../assets/Image30.webp") 50% / cover no-repeat;
+    margin-bottom: 179px;
+    margin: 0;
+    width: 100%;
+    height: 500px;
+  }
+  .with-the-implementation-of-cutting-edge-technologies-such-as-augmented-reality-and-machine-learning-furnifit-is-determined-to-become-areliable-partner-for-many-people-in-arranging-spaces-with-the-right-furniture-thus-furnifit-is-not-just-an-ordinary-ar-platform-but-acomprehensive-solution-that-helps-overcome-doubts-and-uncertainties-in-the-furniture-purchasing-process {
+    margin: center;
+    padding: 150px 180px 150px 180px;
+    align-self: center;
+    text-align: center;
+    overflow-wrap: break-word;
+    font-family: $font-family_2;
+    font-weight: 300;
+    font-size: 27px;
+    letter-spacing: 0.4px;
+    line-height: 1.25;
+    color: $color_2;
+  }
+  .container-1AU {
+    background: #ffffff;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    max-width: 1920px;
+    top: 950px;
+  }
+  .founded-by-agroup-of-informatics-students-department-in-president-university-furnifit-is-not-just-an-academic-project-but-also-an-expression-of-commitment-to-bring-innovative-solutions-this-team-consists-of-rizvany-aisyah-anisya-niken-manik-kartika-nirmala-pusparatna-and-yusi-roziana-who-combine-the-knowledge-and-skills-they-acquired-during-their-study-to-bring-technological-convenience-into-everyday-life {
+    overflow-wrap: break-word;
+    margin: 30px 100px 30px 100px;
+    font-family: $font-family_3;
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: 0.4px;
+    line-height: 1.389;
+    color: $color_2;
+    width: 100%;
+  }
+  .container-2AU {
+    background: rgba(221, 229, 223, 0.65);
+    position: absolute;
+    align-items: center;
+    top: 460px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 500px;
+    box-sizing: border-box;
+  }
+  .furnifit-and-team {
+    margin: 100px 200px 100px 200px;
+    display: inline-block;
+    text-align: center;
+    overflow-wrap: break-word;
+    font-family: $font-family_4;
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 0.5px;
+    line-height: 1;
+    color: $color_3;
+  }
+  .furnifit-established-in-2024-is-aresponse-to-the-common-issue-faced-by-many-people-when-purchasing-furniture-uncertainty-about-placement-with-aclear-vision-furnifit-was-founded-with-the-goal-of-convincing-consumers-to-choose-products-that-align-with-their-desires-through-the-integration-of-augmented-reality-ar-technology-in-the-spaces-they-desire {
+    overflow-wrap: break-word;
+    margin: auto;
+    margin-right: 70px;
+    height: fit-content;
+    font-family: $font-family_3;
+    font-weight: 400;
+    font-size: 23px;
+    letter-spacing: 0.4px;
+    line-height: 1.25;
+    color: $color_3;
+    width: 100%;
+  }
+  .container-3AU {
+    position: absolute;
+    left: 0px;
+    top: 60px;
+    right: 5px;
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px 50px 50px 0;
+    box-sizing: border-box;
+  }
+
+  .image-28 {
+    mix-blend-mode: darken;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: url("../assets/Image28.webp") 50% / cover no-repeat;
+    position: absolute;
+    left: 0px;
+    top: 60px;
+    right: 0px;
+    height: 400px;
+    filter: brightness(0.4); /* Ubah nilai ini untuk menyesuaikan kegelapan */
+  }
+
+  .desain-tanpa-judul-31 {
+    background: url("../assets/DesainTanpaJudul31.webp") 50% / cover no-repeat;
+    position: absolute;
+    top: 1400px;
+    left: 5px;
+    right: 0px;
+    bottom: 118.7px;
+    height: 641.3px;
+  }
+  .landingAU {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0px 0px 0 0px;
+    width: 100%;
+    top: -10px;
+    box-sizing: border-box;
+  }
+  .vector-5AU {
+    background: #73976b;
+    margin-bottom: 24px;
+    width: 100%;
+    height: 1px;
+  }
+  .furni-fitAU {
+    margin-bottom: 6px;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: $font-family_6;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.2px;
+    line-height: 1.4;
+    color: $color_4;
+  }
+  .all-rights-reservedAU {
+    overflow-wrap: break-word;
+    font-family: $font-family_6;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0.2px;
+    line-height: 1.4;
+    color: $color_4;
+  }
+  .footer-furni-fitAU {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  .about-usAU {
+    overflow-wrap: break-word;
+    font-family: $font-family_6;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    line-height: 1.4;
+    color: $color_4;
+    text-decoration: none;
+  }
+  .nav-footerAU {
+    margin: 14px 0 17px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  .containerAU {
+    margin-right: 9.7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .footerAU {
+    background: #ffffff;
+    position: relative;
+    margin-left: 5px;
+    top: 1500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 32.6px 41px 36px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  //nav mob
+  .nav-MobAU {
+    border-bottom: 0.8px solid #858585;
+    background: rgba(212, 222, 210, 0.71);
+    display: none;
+    flex-direction: row;
+    width: 100%;
+    height: 72.8px;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .elegant-logo-4-crop-1AU {
+    background: url("../assets/ElegantLogo4Crop1.webp") 50% / cover no-repeat;
+    margin-top: 20px;
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-bottom: 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
+    height: 30px;
+    display: none;
+    z-index: -1000;
+  }
+  .clarityvmw-app-line {
+    background: url("../assets/8.webp") 50% / cover no-repeat;
+    margin: 15px 0px 10px 10px;
+    width: 100px;
+    height: 47px;
+    display: none;
+    box-sizing: border-box;
+  }
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 470px) {
+  .about-us-page {
+    height: 932px;
+    max-width: 470px;
+    box-sizing: border-box;
+    overflow: auto;
+    .navAU {
+      display: none;
+    }
+    .group-230AU {
+      display: none;
+    }
+
+    .container-3AU {
+      position: absolute;
+      left: 0px;
+      top: 10px;
+      right: 0px;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 50px 30px 50px 30px;
+      box-sizing: border-box;
+    }
+    .furnifit-and-team {
+      margin: 0 0 0 0;
+      padding-bottom: 40px;
+      width: 100%;
+    }
+    .furnifit-established-in-2024-is-aresponse-to-the-common-issue-faced-by-many-people-when-purchasing-furniture-uncertainty-about-placement-with-aclear-vision-furnifit-was-founded-with-the-goal-of-convincing-consumers-to-choose-products-that-align-with-their-desires-through-the-integration-of-augmented-reality-ar-technology-in-the-spaces-they-desire {
+      text-align: center;
+      margin-right: 70px;
+      font-size: 18px;
+    }
+    .image-28 {
+      top: 10px;
+      right: 0px;
+      height: 350px;
+      filter: brightness(0.4); /* Ubah nilai ini untuk menyesuaikan kegelapan */
+    }
+    .container-2AU {
+      height: fit-content;
+      top: 360px;
+      flex-direction: column;
+    }
+    .founded-by-agroup-of-informatics-students-department-in-president-university-furnifit-is-not-just-an-academic-project-but-also-an-expression-of-commitment-to-bring-innovative-solutions-this-team-consists-of-rizvany-aisyah-anisya-niken-manik-kartika-nirmala-pusparatna-and-yusi-roziana-who-combine-the-knowledge-and-skills-they-acquired-during-their-study-to-bring-technological-convenience-into-everyday-life {
+      margin: 0 0 0 0;
+      padding: 60px 70px 60px 70px;
+      text-align: left;
+      height: fit-content;
+      font-size: 13px;
+      line-height: 1.25;
+      box-sizing: border-box;
+    }
+    .image-30 {
+      background: url("../assets/Image30.webp") 50% / cover no-repeat;
+      margin-bottom: 0px;
+      width: 100%;
+      height: 233px;
+    }
+    .container-1AU {
+      top: 857px;
+    }
+    .with-the-implementation-of-cutting-edge-technologies-such-as-augmented-reality-and-machine-learning-furnifit-is-determined-to-become-areliable-partner-for-many-people-in-arranging-spaces-with-the-right-furniture-thus-furnifit-is-not-just-an-ordinary-ar-platform-but-acomprehensive-solution-that-helps-overcome-doubts-and-uncertainties-in-the-furniture-purchasing-process {
+      padding: 70px 30px 70px 30px;
+      font-size: 20px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+    .desain-tanpa-judul-31 {
+      top: 1223px;
+      left: 0px;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+    }
+    .footerAU {
+      margin-left: 0;
+      top: 1180px;
+      display: flex;
+      align-items: center;
+      padding: 30px 32.6px 20px 36px;
+    }
+    .furni-fitAU {
+      font-size: 15px;
+    }
+    //nav settings
+    .group-230AU {
+      display: none;
+    }
+    .clarityvmw-app-line {
+      display: flex;
+      width: 100px; /* Tetapkan lebar tetap */
+      flex-grow: 0;
+    }
+    .navAU {
+      display: none;
+    }
+    .nav-MobAU {
+      display: flex;
+      flex-direction: row;
+    }
+    .elegant-logo-4-crop-1AU {
+      display: flex;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .nav-page-mob-resive {
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+      border-radius: 0 60px 60px 0;
+      background: #eff2f1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 600px;
+      padding: 20.3px 17.8px 38px 17.8px;
+      box-sizing: border-box;
+      animation: fadeIn 0.7s ease;
+    }
+    .nav-page-mob-resive .closenav {
+      background: url("../assets/9.webp") 50% / cover no-repeat;
+      width: 25px;
+      height: 25px;
+      align-self: flex-start;
+    }
+    .nav-page-mob-resive .elegant-logo-21 {
+      background: url("../assets/ElegantLogo22.webp") 50% / cover no-repeat;
+      margin: 0 4px 69px 0;
+      width: 197px;
+      height: 206px;
+    }
+    .nav-page-mob-resive .homeAU,
+    .nav-page-mob-resive .recommendationAU,
+    .nav-page-mob-resive .furnitureAU,
+    .nav-page-mob-resive .aboutAU {
+      margin: 17px 0 14px 0;
+      display: inline-block;
+      overflow-wrap: break-word;
+      font-family: $font-family_1;
+      font-weight: 400;
+      font-size: 24px;
+      z-index: 2000;
+      color: $color_1;
+    }
+    .active {
+      border-bottom: 0px solid #73976b; /* Menghapus garis bawah */
+      text-shadow: 2px 6px 4px rgba(0, 0, 0, 0.5); /* Menambah bayangan dengan offset (2px, 2px), blur radius 4px, dan warna hitam dengan opacity 0.5 */
+    }
+  }
+}

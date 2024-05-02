@@ -1,1150 +1,986 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:wght@500&family=Poppins&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:wght@500&family=Poly&family=Poppins&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+@use "../utilities//functions.scss" as func;
+@import "../utilities/mixins.scss";
+@import url(https://fonts.googleapis.com/css2?family=Buda:wght@300&family=Satisfy&display=swap);
 
-.furniture-page-revise {
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-auto-rows: minmax(100px, auto);
-        grid-gap: 27px;
-        padding-inline: 84px;
-      }
-  
-      .grid-item {
-        background-color: #ccc;
-        text-align: center;
-        height: 396px;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        overflow: hidden;
-        border-radius: 15px;
-      }
-  
-      @media screen and (max-width: 600px) {
-        .grid-container {
-          grid-template-columns: 1fr;
-        }
-      }
-}
+$color_1: #2f2f2f;
+$color_2: #292222;
+$color_3: #446a60;
+$color_4: #2e5a52;
+$color_5: #4b4b4b;
+$color_6: #dbe8dc;
+$color_7: #ffffff;
+$color_8: #000000;
+$color_9: #73976b;
+$color_10: #3b5d50;
+$color_11: #c6d51c;
+$font-family_1: "Poppins";
+$font-family_2: "Poly";
+$font-family_3: "Roboto";
+$font-family_4: "Bevan";
+$font-family_5: "Buda";
 
-.furniture-page-revise .container {
-	margin: 0 3px 62px 3px;
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
-	width: 1608px;
-	box-sizing: border-box;
+.landing-page-revise-1 {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 100%; /* Menggunakan persentase untuk lebar agar responsif */
+  /* Membuat margin kanan auto untuk mendorong elemen ke tengah */
+  box-sizing: border-box;
+  margin: auto;
+  .container-13 {
+    background: url("../assets/5.webp") 50% / cover no-repeat;
+    margin: 0 16.4px 6px 16.4px;
+    align-self: flex-start;
+    width: 37.6px;
+    height: 43.01px;
   }
-  .furniture-page-revise .container-1 {
-	margin: 0 3px 62px 3px;
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
-	width: 1608px;
-	box-sizing: border-box;
+  .why-choose-us {
+    padding-bottom: 40px;
+    display: inline-block;
+    align-self: center;
+    overflow-wrap: break-word;
+    font-family: $font-family_1;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 0.911;
+    color: $color_1;
   }
-  .furniture-page-revise .container-2 {
-	margin: 0 3px 62px 3px;
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
-	width: 1608px;
-	box-sizing: border-box;
+  .wcu-4 {
+    border-radius: 20px;
+    width: 100%;
+    margin: 0 70px 1px 0px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
   }
-  .furniture-page-revise .container-3 {
-	margin: 0 3px 62px 3px;
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
-	width: 100%;
-	box-sizing: border-box;
+  .we-will-recommend-you-some-furniture-according-to-your-needs {
+    margin-left: 0px;
+    overflow-wrap: break-word;
+    font-family: $font-family_2;
+    width: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.556;
+    color: $color_2;
   }
-  .furniture-page-revise .container-4 {
-	margin: 0 8px 0 9px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	width: 321px;
-	box-sizing: border-box;
+  .helpful {
+    margin: 0 0.5px 13.9px 0.5px;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: $font-family_1;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 0.88;
+    color: $color_1;
   }
-  .furniture-page-revise .container-5 {
-	border-radius: 10px;
-	background: #D9E2D7;
-	position: relative;
-	margin-bottom: 14px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding: 29px 1px 29.7px 0;
-	width: 338px;
-	height: 300px;
-	box-sizing: border-box;
+  .wcu-3 {
+    border-radius: 20px;
+    width: 100%;
+    margin: 0 100px 1px 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
   }
-  .furniture-page-revise .container-6 {
-	margin-right: 9.7px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	width: 100%;
-	box-sizing: border-box;
+  .no-worry-of-misplaced-you-be-able-to-displays-3-dfurniture-models-in-real-time-camera-view {
+    overflow-wrap: break-word;
+    font-family: $font-family_2;
+    width: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.556;
+    color: $color_2;
   }
-  .furniture-page-revise .nav {
-        align-items: center;
-		border-bottom: 0.8px solid #858585;
-  		background: rgba(212, 222, 210, 1);
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		padding: 10px 79px 10px 57px;
-		width: 100%; 
-		max-width: 1920px;// Menggunakan lebar 100% agar sesuai dengan lebar layar
-		height: fit-content;
-		box-sizing: border-box;
-		transition: top 0.3s; // Efek transisi ketika navbar bergeser
-		position: fixed;
-		top: 0;
-		width: 100vw;
-		max-width: 100%;
-		left: 50%;
-		transform: translateX(-50%);
-		z-index: 1000; /* Pastikan navbar selalu berada di atas konten */
+  .real-time {
+    margin: 0 0.5px 13.9px 0.5px;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: $font-family_1;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 0.88;
+    color: $color_1;
   }
-  .container-line {
-	width: 110px;
-    /* contoh: width: 300px; */
-    margin: 17px 0 3px 0;
+  .wcu-2 {
+    border-radius: 20px;
+    width: 100%;
+    margin: 0 100px 29px 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  .select-the-furniture-then-arrange-the-furniture-in-your-space-only-with-your-phone-camera {
+    margin-left: 0.5px;
+    overflow-wrap: break-word;
+    font-family: $font-family_2;
+    width: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.556;
+    color: $color_2;
+  }
+  .easy-to-use {
+    margin-bottom: 17px;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: $font-family_1;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 0.88;
+    color: $color_1;
+  }
+  .wcu-1 {
+    border-radius: 20px;
+    margin: 0 100px 29px 0;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  .no-need-to-install-an-application-only-using-the-browser {
+    overflow-wrap: break-word;
+    font-family: $font-family_2;
+    width: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.556;
+    color: $color_2;
+  }
+  .simple {
+    margin: 0 0.5px 14.9px 0.5px;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: $font-family_1;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 0.88;
+    color: $color_1;
+  }
+  .frame-31 {
+    box-shadow: 4px 8px 8px 0px rgba(68, 106, 96, 0.4);
+    border-radius: 8px;
+    border: 2px solid #446a60;
+    margin: 0 1300px 52px 0;
+    margin: 0 0px 52px 70px;
+    padding: 0 70px 0 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding: 10px 12.7px 10px 11.8px;
+    box-sizing: border-box;
+  }
+  .see-product {
+    overflow-wrap: break-word;
+    font-family: $font-family_1;
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: 0.3px;
+    line-height: 1.133;
+    color: $color_3;
+  }
+  .what-is-furni-fit {
+    padding: 0 70px 52.1px 70px;
+    left: 9.4px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: $font-family_2;
+    font-weight: 400;
+    font-size: 45px;
+    letter-spacing: 0.4px;
+    line-height: 1.389;
+    color: $color_5;
+  }
+  .welcome-to-furni-fit-discover-afun-new-way-to-choose-and-place-furniture-in-your-space-with-augmented-reality-ar-technology-simply-use-your-devices-camera-to-see-exactly-how-the-furniture-will-look-in-your-room-by-this-website-we-also-provide-arecommendation-system-to-help-you-determine-whether-the-furniture-placement-is-suitable-or-not-for-your-space-start-exploring-our-collection-now-to-effortlessly-and-accurately-update-your-room {
+    padding: 0 70px 52.1px 70px;
+    left: 9.4px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: $font-family_2;
+    height: 302.1px;
+    font-weight: 400;
+    font-size: 28px;
+    letter-spacing: 0.4px;
+    line-height: 1.389;
+    color: $color_5;
+  }
+  .titleser {
+    margin: center;
+    padding: 0px 180px 130px 180px;
+    align-self: center;
+    text-align: center;
+    overflow-wrap: break-word;
+    font-family: $font-family_5;
+    font-weight: 300;
+    font-size: 60px;
+    letter-spacing: 0.4px;
+    line-height: 1.25;
+    color: $color_2;
+  }
+  .every-home-is-unique-from-the-living-room-to-the-bedroom-we-provide-personalized-recommendations-tailored-to-your-lifestyle-and-aesthetics-helping-you-create-spaces-that-are-perfect-for-living-and-enjoying {
+    margin-left: 4.8px;
+    margin: 0 4.8px 72.7px 4.8px;
+    overflow-wrap: break-word;
+    font-family: $font-family_2;
+    width: 100%;
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: 0.3px;
+    line-height: 1.563;
+    color: $color_5;
+  }
+  .furniture-recommendation {
+    margin-bottom: 72.5px;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: $font-family_1;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 0.533;
+    color: $color_4;
+  }
+  .visualize-furniture-in-your-space-instantly-browse-our-wide-range-of-furniture-and-decor-options-on-our-intuitive-web-platform-then-see-them-in-real-time-using-your-smartphone-camera {
+    overflow-wrap: break-word;
+    margin: 0 4.8px 72.7px 4.8px;
+    font-family: $font-family_2;
+    width: 100%;
+    margin-left: 120px;
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: 0.3px;
+    line-height: 1.563;
+    color: $color_5;
+  }
+  .ar-furniture {
+    margin: 0 4.8px 72.7px 4.8px;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: $font-family_1;
+    margin-left: 120px;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 0.533;
+    color: $color_4;
+  }
+  .footer {
+    background: #ffffff;
+    position: relative;
+    top: 3385px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 30px 32.6px 41px 36px;
+    box-sizing: border-box;
+  }
+  .nav {
+    border-bottom: 0.8px solid #858585;
+    background: rgba(212, 222, 210, 1);
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 150px 10px 57px;
+    width: 100%; // Menggunakan lebar 100% agar sesuai dengan lebar layar
+    height: fit-content;
+    box-sizing: border-box;
+    transition: top 0.3s; // Efek transisi ketika navbar bergeser
+  }
+
+  .nav.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000; /* Pastikan navbar selalu berada di atas konten */
+  }
+
+  .line-1 {
+    background: #73976b;
+    margin: 0 0 0 10px;
+    width: 100%;
+    height: 5px;
+  }
+  .container-line {
+    width: 79px;
+    /* contoh: width: 300px; */
+    margin: 0 0 3px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     box-sizing: border-box;
     overflow: hidden;
-}
-  .furniture-page-revise .group-229 {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	width: 110px;
-	height: 5px;
-	box-sizing: border-box;
   }
-   .line-1 {
-	background: #73976B;
-		margin: 0 0 0 10px;
-		width: 100%;
-		max-width: 1920px;
-		height: 5px;
-  }
-  .furniture-page-revise {
-	background: #FFFFFF;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-	height: fit-content;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .home-page-3-footer {
-	background: #FFFFFF;
-	position: absolute;
-	justify-content: center;
-	top: 2300px;
-	left: 0px;
-	right: 0px;
-	width: 100%;
-	margin: 0;
-	height: fit-content;
-  }
-  .furniture-page-revise .product-list {
-	margin-bottom: 102px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-	max-width: 1282px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .footer {
-	background: #FFFFFF;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 31px 32.6px 41px 36px;
-	width: 100%;
-	height: fit-content;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .furniture-items {
-	position: relative;
-    margin: 80px 0 80px 0;
-    left: 0;
-	width: 100%;
-	align-items: center;
-	overflow-wrap: break-word;
-	font-family: 'Poly';
-	text-align: center;
-	font-weight: 400;
-	font-size: 35px;
-	color: #2E5A52;
-  }
-  .furniture-page-revise .group-231 {
-	margin-right: 81px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 338px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .group-232 {
-	margin-right: 78px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 338px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .group-233 {
-	margin-right: 97px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 338px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .group-234 {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 338px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .group-236 {
-	margin: 8px 77px 2px 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 338px;
-	height: fit-content;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .group-240 {
-	margin: 0 81px 5px 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 338px;
-	height: fit-content;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .group-241 {
-	margin: 0 93px 5px 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 338px;
-	height: fit-content;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .group-242 {
-	margin-bottom: 5px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 338px;
-	height: fit-content;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .group-250 {
-	margin: 10px 87px 0 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 338px;
-	height: fit-content;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .ex-ineed-awhite-chair {
-	margin: 12px 21px 13px 30px;
-    display: inline-block;
-    width: 560.9px;
-    overflow-wrap: break-word;
-    font-family: "Poppins";
-    font-weight: 400;
-    font-size: 22px;
-    color: rgba(0, 0, 0, 0.46);
-  }
-  .inputsearch{
-	border: none;
-	outline: 'none';
-		margin: 18px 21px 13px 20px;
-		display: inline-block;
-		width: 635.9px;
-		overflow-wrap: break-word;
-		font-family: 'Poppins';
-		font-weight: 400;
-		font-size: 28px;
-		color: rgba(0, 0, 0, 0.46);
-		border: none;
-		outline: none;
-	  
+
+  .frame-32 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    height: 3500px;
   }
   .landing {
-	top: 87px;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 100%;
-	height: fit-content;
-	box-sizing: border-box;
-}
-  .container-top {
-		
-	position: relative;
-    aspect-ratio: 1920/1920;
-    background: url("../assets/bg-landing.webp") center/cover no-repeat;
-    background-position: center 44%;
-    filter: brightness(0.85);
-    top: 4px;
+    position: relative;
+    display: flex;
     width: 100%;
-    height: 90vh;
+    top: -80px;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  .group-229 {
+    position: absolute;
+    bottom: 13px;
+    top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 73px;
+    height: 5px;
+    box-sizing: border-box;
+  }
+  .user-cicrle-duotone {
+    background: url("../assets/1.webp") 50% / cover no-repeat;
+    margin: 8px 0;
+    width: 55px;
+    height: 54px;
+  }
+  .group-230 {
+    margin: 0;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .augment-your-space-amplify-your-reality {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    overflow-wrap: break-word;
+    font-family: $font-family_2;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 68px;
+    letter-spacing: 2.7px;
+    color: $color_11;
+    width: 100%;
+  }
+  .introbutt {
+    top: 400px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    height: 140px;
+    position: relative;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 50px 50px 50px 50px;
+  }
+  .explore-home {
+    border-radius: 30px;
+    background: #7a9773;
+    top: 0px;
+    right: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 9.3px 0 7.1px 1px;
+    width: 130px;
+    box-sizing: border-box;
+    margin: 0 0px 0 0px;
+  }
+  .explore {
+    overflow-wrap: break-word;
+    font-family: $font-family_1;
+    font-weight: 400;
+    font-size: 20px;
+    color: $color_7;
+  }
+  .try-now-home {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    border: 1px solid #000000;
+    background: #e4edec;
+    left: 500px;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 9.3px 0 7.1px 1px;
+    width: 130px;
+    box-sizing: border-box;
+    margin: 0 0px 0 0px;
+  }
+  .try-now {
+    overflow-wrap: break-word;
+    font-family: $font-family_1;
+    font-weight: 400;
+    font-size: 20px;
+    color: $color_8;
+  }
+  .introlanding {
+    top: 20px;
     left: 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	box-sizing: border-box;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    justify-content: center;
+  }
+  .image-14 {
+    mix-blend-mode: darken;
+    background: url("../assets/Image14.webp") 50% / cover no-repeat;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    left: 0px;
+    top: 60px;
+    right: 0px;
+    height: 670px;
+    width: 100%;
+    filter: brightness(0.7); /* Ubah nilai ini untuk menyesuaikan kegelapan */
+  }
+  .image-16 {
+    mix-blend-mode: multiply;
+    box-shadow: 0px 4px 4px 0px rgba(51, 92, 52, 0.94);
+    border-radius: 30px;
+    background: url("../assets/Image14.webp") 50% / cover no-repeat;
+    width: 100%;
+    max-width: 701.09px;
+    height: 445.1px;
+  }
+  .image-19 {
+    mix-blend-mode: multiply;
+    border-radius: 30px;
+    background: url("../assets/Image19.webp") 50% / cover no-repeat;
+    width: 100%;
+    max-width: 699.2px;
+    height: 433.1px;
+  }
+  .elegant-logo-4-crop-1 {
+    background: url("../assets/ElegantLogo4Crop1.webp") 50% / cover no-repeat;
+    margin-bottom: 55px;
+    margin-top: 55px;
+    width: 500px;
+    height: 102px;
+    box-sizing: border-box;
+  }
+  .container-1 {
+    margin: 20.3px 0 28.1px 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  .container-2 {
+    background: url("../assets/2.webp") 50% / cover no-repeat;
+    margin: 0 16.4px 5.1px 16.4px;
+    align-self: flex-start;
+    width: 47.2px;
+    height: 42px;
+  }
+  .container-3 {
+    margin: 57.5px 88.6px 29.1px 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  .container-4 {
+    background: rgba(221, 229, 223, 0.63);
+    position: absolute;
+    left: 0px;
+    top: 750px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 106.2px 0 97.6px 0;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .container-5 {
+    background: #ffffff;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    top: 1410px;
+    width: 100%;
+    padding: 185.3px 168.6px 185.3px 185.3px;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .container-6 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+    position: relative;
+    align-self: center;
+  }
+  .container-7 {
+    margin: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .container-8 {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+  }
+  .container-9 {
+    background: url("../assets/4.webp") 50% / cover no-repeat;
+    margin: 0 16.4px 6.1px 16.4px;
+    align-self: flex-start;
+    width: 47.2px;
+    height: 42px;
+  }
+  .container-10 {
+    margin: 0 135.5px 60px 0;
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-self: center;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  .container-11 {
+    background: #e9efeb;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 156px;
+    top: 3000px;
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+    padding: 68px 127.2px 64.1px 127.2px;
+    box-sizing: border-box;
+  }
+  .container-12 {
+    background: url("../assets/3.webp") 50% / cover no-repeat;
+    margin: 0 14.9px 4px 14.9px;
+    align-self: flex-start;
+    width: 48.2px;
+    height: 42px;
+  }
+  .footer-furni-fit {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  .furni-fit {
+    margin-bottom: 6px;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: $font-family_3;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.2px;
+    line-height: 1.4;
+    color: $color_9;
+  }
+  .all-rights-reserved {
+    overflow-wrap: break-word;
+    font-family: $font-family_3;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.2px;
+    line-height: 1.4;
+    color: $color_9;
+  }
+  .vector-5 {
+    background: #73976b;
+    margin-bottom: 24px;
+    width: 100%;
+    height: 1px;
+  }
+  .nav-footer {
+    margin: 14px 0 17px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+  }
+  .about-us {
+    overflow-wrap: break-word;
+    font-family: $font-family_3;
+    margin-left: auto;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    line-height: 1.4;
+    color: $color_9;
+    text-decoration: none;
+  }
+  .partnership {
+    overflow-wrap: break-word;
+    font-family: $font-family_3;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.2px;
+    line-height: 1.4;
+    color: $color_9;
+  }
+  .privacy-police {
+    overflow-wrap: break-word;
+    font-family: $font-family_3;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.2px;
+    line-height: 1.4;
+    color: $color_9;
+  }
+  .home {
+    margin: 0 0 0 10px; /* Sesuaikan margin agar berada di atas line */
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: $font-family_4;
+    max-width: fit-content;
+    font-weight: 400;
+    font-size: 24px;
+    color: $color_10;
+    text-decoration: none;
+  }
+  .recommendation {
+    margin: 17px 0 14px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: $font-family_4;
+    font-weight: 400;
+    font-size: 24px;
+    color: $color_10;
+    text-decoration: none;
+
+	@include mobileStyles {
+		font-family: "Poppins";
+	}
+  }
+  .furniture {
+    margin: 17px 0 14px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: $font-family_4;
+    font-weight: 400;
+    font-size: 24px;
+    color: $color_10;
+    text-decoration: none;
+  }
+  .about {
+    margin: 17px 0px 14px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: $font-family_4;
+    font-weight: 400;
+    font-size: 24px;
+    color: $color_10;
+    text-decoration: none;
+  }
+  .active {
+    border-bottom: 5px solid #73976b; /* Misalnya, garis bawah putih dengan lebar 2px */
+  }
+
+  .elegant-logo-2 {
+    background: url("../assets/ElegantLogo2.webp") 50% / cover no-repeat;
+    width: 172px;
+    height: 70px;
+  }
+  //nav mob
+  .nav-MobLP {
+    border-bottom: 0.8px solid #858585;
+    background: rgba(212, 222, 210, 0.71);
+    display: none;
+    flex-direction: row;
+    width: 100%;
+    height: 72.8px;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .elegant-logo-4-crop-1LP {
+    background: url("../assets/ElegantLogo4Crop1.webp") 50% / cover no-repeat;
+    margin-top: 20px;
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-bottom: 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
+    height: 30px;
+    z-index: -1000;
+    display: none;
+  }
+  .clarityvmw-app-lineLP {
+    background: url("../assets/8.webp") 50% / cover no-repeat;
+    margin: 15px 0px 10px 10px;
+    width: 100px;
+    height: 47px;
+    display: none;
+    box-sizing: border-box;
+  }
 }
-  .furniture-page-revise .dive-into-your-needs {
-    color: white;
-	width: 100%;
-	margin: 100px 0 100px 0;
-	display: flex;
-	flex-direction: row;
-	overflow-wrap: break-word;
-	font-family: 'Poppins';
-	justify-content: center;
-	font-weight: 600;
-	font-size: 48px;
-  }
-  .group-252 {
-    z-index: 1;
-	display: flex;
-	position: fixed;
-	flex-direction: row;
-	justify-content: center;
-	scroll-margin: 87px;
-	width: 100%;
-    bottom: 25%;
-	height:fit-content;
-  }
-//   .furniture-page-revise .vector {
-// 	background: url('assets/images/Vector3_x2.svg') 50% / cover no-repeat;
-// 	margin: 12px 0 13px 0;
-// 	width: 31px;
-// 	height: 42px;
-//   }
-  .furniture-page-revise .component-14 {
-	margin: 8px 97px 2px 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 338px;
-	height: fit-content;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .container {
-	overflow-wrap: break-word;
-	font-family: 'Poly';
-	font-weight: 400;
-	font-size: 40px;
-	line-height: 1.35;
-	color: #000000;
-  }
-  .furniture-page-revise .group-253 {
-	border-radius: 32.5px;
-	background: #C0CEC7;
-	position: relative;
-	margin: 0 27px 2px 0;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding: 1px 0.1px 10px 0;
-	width: 65px;
-	height: 65px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .group-254 {
-	border-radius: 32.5px;
-	background: #C0CEC7;
-	position: relative;
-	margin: 0 27px 2px 0;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding: 1px 0.1px 10px 0;
-	width: 65px;
-	height: 65px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .container-1 {
-	overflow-wrap: break-word;
-	font-family: 'Poly';
-	font-weight: 400;
-	font-size: 40px;
-	line-height: 1.35;
-	color: #000000;
-  }
-  .furniture-page-revise .group-251 {
-	margin-bottom: 10px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 338px;
-	height: fit-content;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .group-2521 {
-	margin: 5px 88px 0 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 338px;
-	height: fit-content;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .group-255 {
-	border-radius: 32.5px;
-	background: #C0CEC7;
-	position: relative;
-	margin: 0 27px 2px 0;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding: 1px 0.1px 10px 0;
-	width: 65px;
-	height: 65px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .ellipse-5142 {
-	border-radius: 32.5px;
-	background: #C0CEC7;
-	position: absolute;
-	left: 50%;
-	bottom: 0px;
-	translate: -50% 0;
-	width: 65px;
-	height: 65px;
-  }
-  .furniture-page-revise .container-2 {
-	position: relative;
-	overflow-wrap: break-word;
-	font-family: 'Poly';
-	font-weight: 400;
-	font-size: 40px;
-	line-height: 1.35;
-	color: #000000;
-  }
-  .furniture-page-revise .group-256 {
-	border-radius: 32.5px;
-	background: #C0CEC7;
-	position: relative;
-	margin: 0 27px 2px 0;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding: 1px 0.1px 10px 0;
-	width: 65px;
-	height: 65px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .ellipse-5143 {
-	border-radius: 32.5px;
-	background: #C0CEC7;
-	position: absolute;
-	left: 50%;
-	bottom: 0px;
-	translate: -50% 0;
-	width: 65px;
-	height: 65px;
-  }
-  .furniture-page-revise .container-3 {
-	overflow-wrap: break-word;
-	width: 100%;
-	font-family: 'Poly';
-	font-weight: 400;
-	font-size: 40px;
-	line-height: 1.35;
-	color: #000000;
-  }
-  .furniture-page-revise .pages {
-	margin-left: 3px;
-	display: flex;
-	flex-direction: row;
-	width: 415px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .container-7 {
-	border-radius: 10px;
-	background: #D9E2D7;
-	position: relative;
-	margin-bottom: 14px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding: 29px 1px 29.7px 0;
-	width: 338px;
-	height: 300px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .container-8 {
-	margin: 0 8px 0 9px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	width: 321px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .container-9 {
-	border-radius: 10px;
-	background: #D9E2D7;
-	position: relative;
-	margin-bottom: 14px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding: 29px 1px 29.7px 0;
-	width: 338px;
-	height: 300px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .container-10 {
-	border-radius: 10px;
-	background: #D9E2D7;
-	position: relative;
-	margin-bottom: 14px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding: 29px 1px 29.7px 0;
-	width: 338px;
-	height: 300px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .container-11 {
-	margin: 0 3px 62px 3px;
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
-	width: 100%;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .container-12 {
-	margin: 0 8px 0 9px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	width: 321px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .container-13 {
-	margin: 0 8px 0 9px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	width: 321px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .container-14 {
-	margin: 0 8px 0 9px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	width: 321px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .container-15 {
-	border-radius: 10px;
-	background: #D9E2D7;
-	position: relative;
-	margin-bottom: 14px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding: 29px 1px 29.7px 0;
-	width: 338px;
-	height: 300px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .container-16 {
-	border-radius: 10px;
-	background: #D9E2D7;
-	position: relative;
-	margin-bottom: 14px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding: 29px 1px 29.7px 0;
-	width: 338px;
-	height: 300px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .container-17 {
-	border-radius: 10px;
-	background: #D9E2D7;
-	position: relative;
-	margin-bottom: 14px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding: 29px 1px 29.7px 0;
-	width: 338px;
-	height: 300px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .container-18 {
-	border-radius: 10px;
-	background: #D9E2D7;
-	position: relative;
-	margin-bottom: 14px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding: 29px 1px 29.7px 0;
-	width: 338px;
-	height: 300px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .container-19 {
-	margin: 0 8px 0 9px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	width: 321px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .container-20 {
-	border-radius: 10px;
-	background: #D9E2D7;
-	position: relative;
-	margin-bottom: 14px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding: 29px 1px 29.7px 0;
-	width: 338px;
-	height: 300px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .container-21 {
-	margin: 0 8px 0 9px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	width: 321px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .container-22 {
-	margin: 0 8px 0 9px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	width: 321px;
-	box-sizing: border-box;
-  }
+@media screen and (max-width: 470px) {
+  .landing-page-revise-1 {
+    .elegant-logo-4-crop-1 {
+      display: none;
+    }
+    .frame-32 {
+      top: 0;
+      align-items: center;
+      padding: 0px 0 300px 0;
+      height: 4000px;
+    }
+    .image-14 {
+      top: 0px;
+      bottom: 0px;
+      height: 100%;
+      width: 100%;
+    }
+    .landing {
+      top: 0;
+    }
+    .introlanding {
+      top: 0;
+      height: 750px;
+    }
+    .introbutt {
+      top: 250px;
+      margin-top: 100px;
+      align-items: center;
+    }
 
-  .furniture-page-revise .container-24 {
-	margin: 0 8px 0 9px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	width: 321px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .container-25 {
-	border-radius: 10px;
-	background: #D9E2D7;
-	position: relative;
-	margin-bottom: 14px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding: 29px 1px 29.7px 0;
-	width: 338px;
-	height: 300px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .container-26 {
-	display: flex;
-	flex-direction: row;
-	width: 1614px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .home {
-	margin: 17px 0 14px 0;
-	display: inline-block;
-	overflow-wrap: break-word;
-	font-family: 'poppins';
-	font-weight: 400;
-	font-size: 20px;
-	color: #3B5D50;
-  }
-  .furniture-page-revise .recommendation {
-	margin: 17px 0 14px 0;
-	display: inline-block;
-	overflow-wrap: break-word;
-	font-family: 'poppins';
-	font-weight: 400;
-	font-size: 20px;
-	color: #3B5D50;
-  }
-  .furniture-page-revise .furniture {
-	margin: 0 0 0 10px;
-	display: inline-block;
-	overflow-wrap: break-word;
-	font-family: 'poppins';
-	font-weight: 400;
-	font-size: 20px;
-	color: #3B5D50;
-  }
-  .furniture-page-revise .about {
-	margin: 17px 0 14px 0;
-	display: inline-block;
-	overflow-wrap: break-word;
-	font-family: 'poppins';
-	font-weight: 400;
-	font-size: 20px;
-	color: #3B5D50;
-  }
-//   .furniture-page-revise .user-cicrle-duotone {
-// 	background: url('assets/images/1.png') 50% / cover no-repeat;
-// 	margin: 8px 0;
-// 	width: 55px;
-// 	height: 54px;
-//   }
-  .furniture-page-revise .elegant-logo-2 {
-	background: url('../assets/ElegantLogo2.webp') 50% / cover no-repeat;
-	width: 172px;
-	height: 70px;
-  }
-  .furniture-page-revise .product-name {
-	margin: 0 12px 24px 0;
-	display: inline-block;
-	width: 195.9px;
-	overflow-wrap: break-word;
-	font-family: 'Poppins';
-	font-weight: 600;
-	font-size: 20px;
-	line-height: 1.2;
-	color: #2F2F2F;
-  }
-  .furniture-page-revise .product-1 {
-	background: url('../assets/Product1.webp') 50% / cover no-repeat, url('../assets/Product1.webp') 50% / cover no-repeat;
-	width: 189px;
-	height: 241.3px;
-  }
-  .furniture-page-revise .product-type-indoor-outdoor {
-	text-align: right;
-	overflow-wrap: break-word;
-	font-family: 'Poly';
-	font-weight: 400;
-	font-size: 15px;
-	line-height: 1.6;
-	color: #2F2F2F;
-  }
-  .furniture-page-revise .product-name-1 {
-	margin: 0 12px 24px 0;
-	display: inline-block;
-	width: 195.9px;
-	overflow-wrap: break-word;
-	font-family: 'Poppins';
-	font-weight: 600;
-	font-size: 20px;
-	line-height: 1.2;
-	color: #2F2F2F;
-  }
-  .furniture-page-revise .product-11 {
-	background: url('../assets/Product1.webp') 50% / cover no-repeat, url('../assets/Product1.webp') 50% / cover no-repeat;
-	width: 189px;
-	height: 241.3px;
-  }
-  .furniture-page-revise .product-type-indoor-outdoor-1 {
-	text-align: right;
-	overflow-wrap: break-word;
-	font-family: 'Poly';
-	font-weight: 400;
-	font-size: 15px;
-	line-height: 1.6;
-	color: #2F2F2F;
-  }
-  .furniture-page-revise .product-name-2 {
-	margin: 0 12px 24px 0;
-	display: inline-block;
-	width: 195.9px;
-	overflow-wrap: break-word;
-	font-family: 'Poppins';
-	font-weight: 600;
-	font-size: 20px;
-	line-height: 1.2;
-	color: #2F2F2F;
-  }
-  .furniture-page-revise .product-12 {
-	background: url('../assets/Product1.webp') 50% / cover no-repeat, url('../assets/Product1.webp') 50% / cover no-repeat;
-	width: 189px;
-	height: 241.3px;
-  }
-  .furniture-page-revise .product-type-indoor-outdoor-2 {
-	text-align: right;
-	overflow-wrap: break-word;
-	font-family: 'Poly';
-	font-weight: 400;
-	font-size: 15px;
-	line-height: 1.6;
-	color: #2F2F2F;
-  }
-  .furniture-page-revise .product-name-3 {
-	margin: 0 12px 24px 0;
-	display: inline-block;
-	width: 195.9px;
-	overflow-wrap: break-word;
-	font-family: 'Poppins';
-	font-weight: 600;
-	font-size: 20px;
-	line-height: 1.2;
-	color: #2F2F2F;
-  }
-  .furniture-page-revise .product-13 {
-	background: url('../assets/Product1.webp') 50% / cover no-repeat, url('../assets/Product1.webp') 50% / cover no-repeat;
-	width: 189px;
-	height: 241.3px;
-  }
-  .furniture-page-revise .product-type-indoor-outdoor-3 {
-	text-align: right;
-	overflow-wrap: break-word;
-	font-family: 'Poly';
-	font-weight: 400;
-	font-size: 15px;
-	line-height: 1.6;
-	color: #2F2F2F;
-  }
-  .furniture-page-revise .product-name-4 {
-	margin: 0 12px 24px 0;
-	display: inline-block;
-	width: 195.9px;
-	overflow-wrap: break-word;
-	font-family: 'Poppins';
-	font-weight: 600;
-	font-size: 20px;
-	line-height: 1.2;
-	color: #2F2F2F;
-  }
-  .furniture-page-revise .product-14 {
-	background: url('../assets/Product1.webp') 50% / cover no-repeat, url('../assets/Product1.webp') 50% / cover no-repeat;
-	width: 189px;
-	height: 241.3px;
-  }
-  .furniture-page-revise .product-type-indoor-outdoor-4 {
-	text-align: right;
-	overflow-wrap: break-word;
-	font-family: 'Poly';
-	font-weight: 400;
-	font-size: 15px;
-	line-height: 1.6;
-	color: #2F2F2F;
-  }
-  .furniture-page-revise .product-name-5 {
-	margin: 0 12px 24px 0;
-	display: inline-block;
-	width: 195.9px;
-	overflow-wrap: break-word;
-	font-family: 'Poppins';
-	font-weight: 600;
-	font-size: 20px;
-	line-height: 1.2;
-	color: #2F2F2F;
-  }
-  .furniture-page-revise .product-15 {
-	background: url('../assets/Product1.webp') 50% / cover no-repeat, url('../assets/Product1.webp') 50% / cover no-repeat;
-	width: 189px;
-	height: 241.3px;
-  }
-  .furniture-page-revise .product-type-indoor-outdoor-5 {
-	text-align: right;
-	overflow-wrap: break-word;
-	font-family: 'Poly';
-	font-weight: 400;
-	font-size: 15px;
-	line-height: 1.6;
-	color: #2F2F2F;
-  }
-  .furniture-page-revise .product-name-6 {
-	margin: 0 12px 24px 0;
-	display: inline-block;
-	width: 195.9px;
-	overflow-wrap: break-word;
-	font-family: 'Poppins';
-	font-weight: 600;
-	font-size: 20px;
-	line-height: 1.2;
-	color: #2F2F2F;
-  }
-  .furniture-page-revise .product-16 {
-	background: url('../assets/Product1.webp') 50% / cover no-repeat, url('../assets/Product1.webp') 50% / cover no-repeat;
-	width: 189px;
-	height: 241.3px;
-  }
-  .furniture-page-revise .product-type-indoor-outdoor-6 {
-	text-align: right;
-	overflow-wrap: break-word;
-	font-family: 'Poly';
-	font-weight: 400;
-	font-size: 15px;
-	line-height: 1.6;
-	color: #2F2F2F;
-  }
-  .furniture-page-revise .product-name-7 {
-	margin: 0 12px 24px 0;
-	display: inline-block;
-	width: 195.9px;
-	overflow-wrap: break-word;
-	font-family: 'Poppins';
-	font-weight: 600;
-	font-size: 20px;
-	line-height: 1.2;
-	color: #2F2F2F;
-  }
-  .furniture-page-revise .product-17 {
-	background: url('../assets/Product1.webp') 50% / cover no-repeat, url('../assets/Product1.webp') 50% / cover no-repeat;
-	width: 189px;
-	height: 241.3px;
-  }
-  .furniture-page-revise .product-type-indoor-outdoor-7 {
-	text-align: right;
-	overflow-wrap: break-word;
-	font-family: 'Poly';
-	font-weight: 400;
-	font-size: 15px;
-	line-height: 1.6;
-	color: #2F2F2F;
-  }
-  .furniture-page-revise .product-name-8 {
-	margin: 0 12px 24px 0;
-	display: inline-block;
-	width: 195.9px;
-	overflow-wrap: break-word;
-	font-family: 'Poppins';
-	font-weight: 600;
-	font-size: 20px;
-	line-height: 1.2;
-	color: #2F2F2F;
-  }
-  .furniture-page-revise .product-18 {
-	background: url('../assets/Product1.webp') 50% / cover no-repeat, url('../assets/Product1.webp') 50% / cover no-repeat;
-	width: 189px;
-	height: 241.3px;
-  }
-  .furniture-page-revise .product-type-indoor-outdoor-8 {
-	text-align: right;
-	overflow-wrap: break-word;
-	font-family: 'Poly';
-	font-weight: 400;
-	font-size: 15px;
-	line-height: 1.6;
-	color: #2F2F2F;
-  }
+    .try-now {
+      overflow-wrap: break-word;
+      font-family: $font-family_1;
+      font-weight: 400;
+      font-size: 20px;
+      color: $color_8;
+    }
+    .augment-your-space-amplify-your-reality {
+      top: 100px;
+      margin-top: 40px;
+      align-items: center;
+      font-size: 48px;
+    }
+    .container-4 {
+      align-items: center;
+      height: 1100px;
+    }
+    .what-is-furni-fit {
+      font-size: 35px;
+      text-align: center;
+    }
+    .welcome-to-furni-fit-discover-afun-new-way-to-choose-and-place-furniture-in-your-space-with-augmented-reality-ar-technology-simply-use-your-devices-camera-to-see-exactly-how-the-furniture-will-look-in-your-room-by-this-website-we-also-provide-arecommendation-system-to-help-you-determine-whether-the-furniture-placement-is-suitable-or-not-for-your-space-start-exploring-our-collection-now-to-effortlessly-and-accurately-update-your-room {
+      height: 500px;
+      text-align: center;
+    }
+    .container-5 {
+      background: #ffffff;
+      border: 0.8px solid #ffffff;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 4px;
+      top: 1840px;
+      width: 100%;
+      padding: 0px 0px 0px 0px;
+      box-sizing: border-box;
+    }
+    .titleser {
+      top: 80px;
+      font-size: 60px;
+      padding: 0 20px 130px 20px;
+      position: relative;
+    }
+    .container-10 {
+      margin: 0;
+      width: 100%;
+      flex-direction: column;
+    }
+    .image-16 {
+      width: 80%;
+      height: 241px;
+      align-self: center;
+    }
+    .ar-furniture {
+      position: relative;
+      top: 0px;
+      margin: 0;
+      margin-bottom: 30px;
+      margin-top: 35px;
+      align-self: center;
+    }
+    .visualize-furniture-in-your-space-instantly-browse-our-wide-range-of-furniture-and-decor-options-on-our-intuitive-web-platform-then-see-them-in-real-time-using-your-smartphone-camera {
+      margin: 0;
+      padding-right: 30px;
+      padding-left: 30px;
+      font-size: 28px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .container-6 {
+      flex-direction: column;
+    }
+    .container-3 {
+      margin: 0;
+      margin-top: 21px;
+      margin-bottom: 21px;
+      position: relative;
+      top: 300px;
+    }
+    .furniture-recommendation {
+      text-align: center;
+      line-height: 1;
+      margin-bottom: 25px;
+    }
+    .every-home-is-unique-from-the-living-room-to-the-bedroom-we-provide-personalized-recommendations-tailored-to-your-lifestyle-and-aesthetics-helping-you-create-spaces-that-are-perfect-for-living-and-enjoying {
+      text-align: center;
+      margin: 0;
+      font-size: 28px;
+      padding-left: 30px;
+      padding-right: 30px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .image-19 {
+      width: 80%;
+      height: 241px;
+      align-self: center;
+      top: -430px;
+      position: relative;
+    }
+    .container-11 {
+      top: 3550px;
+      padding: 20px 20px 20px 20px;
+    }
+    .why-choose-us {
+      font-size: 35px;
+    }
+    .container-8 {
+      flex-direction: column;
+      padding: 0 20px 0 20px;
+    }
+    .wcu-1,
+    .wcu-2,
+    .wcu-3,
+    .wcu-4 {
+      text-align: center;
+    }
+    .container-2,
+    .container-12,
+    .container-9,
+    .container-13 {
+      align-self: center;
+    }
 
-  .search-bar {
-	position: sticky;
-	top: 87px;
-	z-index: 1000;
-	background-color: white;
-	border-radius: 34px;
-	margin: 0 50%;
-	border: 1px solid #3B5D50;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 100%;
-	height: fit-content;
-	box-sizing: border-box;
-	opacity: 1;
-	transition: opacity 0.3s ease; /* Transition for opacity */
+    .simple,
+    .easy-to-use,
+    .real-time,
+    .helpful {
+      align-self: center;
+    }
+    .footer {
+      top: 2690px;
+      padding-bottom: 30px;
+    }
+    .all-rights-reserved {
+      font-size: 13px;
+    }
+    //nav settings
+    .group-230 {
+      display: none;
+    }
+    .clarityvmw-app-lineLP {
+      display: flex;
+      width: 100px; /* Tetapkan lebar tetap */
+      flex-grow: 0;
+    }
+    .nav {
+      display: none;
+    }
+    .nav-MobLP {
+      display: flex;
+      flex-direction: row;
+    }
+    .elegant-logo-4-crop-1LP {
+      display: flex;
+      margin-right: 116px;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .nav-page-mob-resiveLP {
+      position: absolute;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+      border-radius: 0 60px 60px 0;
+      background: #eff2f1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 600px;
+      padding: 20.3px 17.8px 38px 17.8px;
+      box-sizing: border-box;
+      animation: fadeIn 0.7s ease;
+    }
+    .nav-page-mob-resiveLP .closenavLP {
+      width: 25px;
+      height: 25px;
+      align-self: flex-start;
+    }
+    .nav-page-mob-resiveLP .elegant-logo-21LP {
+      background: url("../assets/ElegantLogo22.webp") 50% / cover no-repeat;
+      margin: 0 4px 69px 0;
+      width: 197px;
+      height: 206px;
+    }
+    .nav-page-mob-resiveLP .home,
+    .nav-page-mob-LP .recommendation,
+    .nav-page-mob-resiveLP .furniture,
+    .nav-page-mob-resiveLP .about {
+      margin: 17px 0 14px 0;
+      display: inline-block;
+      overflow-wrap: break-word;
+      font-family: $font-family_1;
+      font-size: 24px;
+      color: $color_10;
+    }
+    .active {
+      border-bottom: 0px solid #73976b; /* Menghapus garis bawah */
+    }
   }
-  
-  .search-bar.hidden {
-	opacity: 0;
-	pointer-events: none; /* Hide pointer events when hidden */
-  }
-//   .furniture-page-revise .group {
-// 	background: url('assets/images/6.png') 50% / cover no-repeat;
-// 	position: absolute;
-// 	top: -2.3px;
-// 	right: 0px;
-// 	display: flex;
-// 	flex-direction: row;
-// 	justify-content: center;
-// 	width: 70px;
-// 	height: 70px;
-// 	box-sizing: border-box;
-//   }
-//   .furniture-page-revise .group-1 {
-// 	background: url('assets/images/6.png') 50% / cover no-repeat;
-// 	display: flex;
-// 	flex-direction: row;
-// 	justify-content: center;
-// 	width: 34.2px;
-// 	height: 40.6px;
-// 	box-sizing: border-box;
-//   }
-  .furniture-page-revise .group-2 {
-	width: 34.2px;
-	height: 40.6px;
-  }
-  .furniture-page-revise .footer-furni-fit {
-	display: flex;
-	flex-direction: column;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .furni-fit {
-	margin-bottom: 6px;
-	display: inline-block;
-	align-self: flex-start;
-	overflow-wrap: break-word;
-	font-family: 'poppins';
-	font-weight: 700;
-	font-size: 20px;
-	letter-spacing: 0.2px;
-	line-height: 1.4;
-	color: #73976B;
-  }
-  .furniture-page-revise .all-rights-reserved {
-	overflow-wrap: break-word;
-	font-family: 'poppins';
-	font-weight: 400;
-	font-size: 18px;
-	letter-spacing: 0.2px;
-	line-height: 1.4;
-	color: #73976B;
-  }
-  .furniture-page-revise .vector-5 {
-	background: #73976B;
-	margin-bottom: 24px;
-	width: 100%;
-	height: 1px;
-  }
-  .furniture-page-revise .nav-footer {
-	margin: 14px 0px 17px 0;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .about-us {
-	overflow-wrap: break-word;
-	font-family: 'Roboto';
-	font-weight: 700;
-	font-size: 20px;
-	letter-spacing: 0.2px;
-	line-height: 1.4;
-	color: #73976B;
-	cursor: pointer;
-  }
-  .furniture-page-revise .product-name-9 {
-	margin: 0 12px 24px 0;
-	display: inline-block;
-	width: 195.9px;
-	overflow-wrap: break-word;
-	font-family: 'Poppins';
-	font-weight: 600;
-	font-size: 20px;
-	line-height: 1.2;
-	color: #2F2F2F;
-  }
-  .furniture-page-revise .product-19 {
-	background: url('../assets/Product1.webp') 50% / cover no-repeat, url('../assets/Product1.webp') 50% / cover no-repeat;
-	width: 189px;
-	height: 241.3px;
-  }
-  .furniture-page-revise .product-type-indoor-outdoor-9 {
-	text-align: right;
-	overflow-wrap: break-word;
-	font-family: 'Poly';
-	font-weight: 400;
-	font-size: 15px;
-	line-height: 1.6;
-	color: #2F2F2F;
-  }
-  .furniture-page-revise .product-name-10 {
-	margin: 0 12px 24px 0;
-	display: inline-block;
-	width: 195.9px;
-	overflow-wrap: break-word;
-	font-family: 'Poppins';
-	font-weight: 600;
-	font-size: 20px;
-	line-height: 1.2;
-	color: #2F2F2F;
-  }
-  .furniture-page-revise .product-110 {
-	background: url('../assets/Product1.webp') 50% / cover no-repeat, url('../assets/Product1.webp') 50% / cover no-repeat;
-	width: 189px;
-	height: 241.3px;
-  }
-  .furniture-page-revise .product-type-indoor-outdoor-10 {
-	text-align: right;
-	overflow-wrap: break-word;
-	font-family: 'Poly';
-	font-weight: 400;
-	font-size: 15px;
-	line-height: 1.6;
-	color: #2F2F2F;
-  }
-  .furniture-page-revise .product-name-11 {
-	margin: 0 12px 24px 0;
-	display: inline-block;
-	width: 195.9px;
-	overflow-wrap: break-word;
-	font-family: 'Poppins';
-	font-weight: 600;
-	font-size: 20px;
-	line-height: 1.2;
-	color: #2F2F2F;
-  }
-  .furniture-page-revise .product-111 {
-	background: url('../assets/Product1.webp') 50% / cover no-repeat, url('../assets/Product1.webp') 50% / cover no-repeat;
-	width: 189px;
-	height: 241.3px;
-  }
-  .furniture-page-revise .product-type-indoor-outdoor-11 {
-	text-align: right;
-	overflow-wrap: break-word;
-	font-family: 'Poly';
-	font-weight: 400;
-	font-size: 15px;
-	line-height: 1.6;
-	color: #2F2F2F;
-  }
-  .furniture-page-revise .container-27 {
-	border-radius: 10px;
-	background: #D9E2D7;
-	position: relative;
-	margin-bottom: 14px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding: 29px 1px 29.7px 0;
-	width: 338px;
-	height: 300px;
-	box-sizing: border-box;
-  }
-  .furniture-page-revise .container-28 {
-	border-radius: 10px;
-	background: #D9E2D7;
-	position: relative;
-	margin-bottom: 14px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding: 29px 1px 29.7px 0;
-	width: 338px;
-	height: 300px;
-	box-sizing: border-box;
-  }
+}
