@@ -17,7 +17,8 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 
-const ChipModal = ({ open, handleClose, receiveRecommendData }) => { // Fungsi khusus untuk modal
+const ChipModal = ({ open, handleClose, receiveRecommendData }) => {
+  // Fungsi khusus untuk modal
   const [fieldChips, setFieldChips] = useState({
     space_category: [],
     sub_space_category: [],
@@ -235,14 +236,29 @@ const ChipModal = ({ open, handleClose, receiveRecommendData }) => { // Fungsi k
           </div>
         </div>
       </DialogContent>
-      <DialogActions sx={{padding: 2}} style={{justifyContent: "center"}}>
-        <Button onClick={handleClose} color="mainRed" variant="contained" style={{borderRadius: '10px', color: 'white'}}>
+      <DialogActions sx={{ padding: 2 }} style={{ justifyContent: "center" }}>
+        <Button
+          onClick={handleClose}
+          color="mainRed"
+          variant="contained"
+          style={{ borderRadius: "10px", color: "white" }}
+        >
           Cancel
         </Button>
-        <Button onClick={handleResetChips} color="mainGrey" variant="contained" style={{borderRadius: '10px', color: 'white'}}>
+        <Button
+          onClick={handleResetChips}
+          color="mainGrey"
+          variant="contained"
+          style={{ borderRadius: "10px", color: "white" }}
+        >
           Reset
         </Button>
-        <Button onClick={handleSubmit} color="mainGreen" variant="contained" style={{borderRadius: '10px', color: 'white'}}>
+        <Button
+          onClick={handleSubmit}
+          color="mainGreen"
+          variant="contained"
+          style={{ borderRadius: "10px", color: "white" }}
+        >
           Submit
         </Button>
       </DialogActions>
@@ -250,7 +266,8 @@ const ChipModal = ({ open, handleClose, receiveRecommendData }) => { // Fungsi k
   );
 };
 
-export const RecommendPage = () => {    // Fungsi utama
+export const RecommendPage = () => {
+  // Fungsi utama
   const navigate = useNavigate();
 
   const [modalOpen, setModalOpen] = useState(false);
@@ -341,10 +358,14 @@ export const RecommendPage = () => {    // Fungsi utama
             </div>
           </div>
           {/* RECOMMENDATION RESULTS */}
-          <div className="result-container" ref={recommendedRef} id="recommended furniture">
+          <div
+            className="result-container"
+            ref={recommendedRef}
+            id="recommended furniture"
+          >
             <div className="header-recommend">
               <div className="inner-text">
-              Recommended Furniture based on Your Preferences
+                Recommended Furniture based on Your Preferences
               </div>
             </div>
             <div className="the-result">
@@ -354,7 +375,7 @@ export const RecommendPage = () => {    // Fungsi utama
                   handleClose={handleCloseModal}
                   onSubmit={handleFormSubmit}
                   receiveRecommendData={receiveRecommendData}
-                  setRecommendData={setRecommendData} 
+                  setRecommendData={setRecommendData}
                 />
 
                 <div className="grid-container">
@@ -429,25 +450,25 @@ export const RecommendPage = () => {    // Fungsi utama
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="home-page-3-footer-recommend">
-          <div className="footer">
-            <div className="vector-5"></div>
-            <div className="container-6">
-              <div className="footer-furni-fit">
-                <div className="furni-fit">FurniFit</div>
-                <span className="all-rights-reserved">
-                  © 2024. All rights reserved
-                </span>
-              </div>
-              <div className="nav-footer">
-                <span
-                  className="about-us"
-                  onClick={() => navigate("/about-us")}
-                >
-                  About Us
-                </span>
+            <div className="home-page-3-footer-recommend">
+              <div className="footer">
+                <div className="vector-5"></div>
+                <div className="container-6">
+                  <div className="footer-furni-fit">
+                    <div className="furni-fit">FurniFit</div>
+                    <span className="all-rights-reserved">
+                      © 2024. All rights reserved
+                    </span>
+                  </div>
+                  <div className="nav-footer">
+                    <span
+                      className="about-us"
+                      onClick={() => navigate("/about-us")}
+                    >
+                      About Us
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

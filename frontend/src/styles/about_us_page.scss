@@ -1,3 +1,5 @@
+@use "../utilities//functions.scss" as func;
+@import "../utilities/mixins.scss";
 @import url(https://fonts.googleapis.com/css2?family=Satisfy&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Buda:wght@300&family=Satisfy&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Buda:wght@300&family=Satisfy&display=swap);
@@ -6,9 +8,10 @@ $color_1: #3b5d50;
 $color_2: #000000;
 $color_3: #ffffff;
 $color_4: #73976b;
+$color_10: #3b5d50;
 $font-family_1: "Bevan";
-$font-family_2: "Buda";
-$font-family_3: "Arapey";
+$font-family_2: "Poppins";
+$font-family_3: "Poppins";
 $font-family_4: "Satisfy";
 $font-family_5: "Abyssinica SIL";
 $font-family_6: "Roboto";
@@ -58,9 +61,6 @@ $font-family_6: "Roboto";
     font-size: 24px;
     color: $color_1;
     text-decoration: none;
-  }
-  .active {
-    border-bottom: 5px solid #73976b; /* Misalnya, garis bawah putih dengan lebar 2px */
   }
   .group-229 {
     display: flex;
@@ -131,7 +131,7 @@ $font-family_6: "Roboto";
     overflow-wrap: break-word;
     font-family: $font-family_2;
     font-weight: 300;
-    font-size: 27px;
+    font-size: 21px;
     letter-spacing: 0.4px;
     line-height: 1.25;
     color: $color_2;
@@ -151,10 +151,11 @@ $font-family_6: "Roboto";
   }
   .founded-by-agroup-of-informatics-students-department-in-president-university-furnifit-is-not-just-an-academic-project-but-also-an-expression-of-commitment-to-bring-innovative-solutions-this-team-consists-of-rizvany-aisyah-anisya-niken-manik-kartika-nirmala-pusparatna-and-yusi-roziana-who-combine-the-knowledge-and-skills-they-acquired-during-their-study-to-bring-technological-convenience-into-everyday-life {
     overflow-wrap: break-word;
-    margin: 30px 100px 30px 100px;
-    font-family: $font-family_3;
-    font-weight: 400;
-    font-size: 25px;
+    margin: 30px 0px 35px 132px;
+    padding-right: 105px;
+    text-align: justify;
+    font-family: 'Poppins';
+    font-size: 20px;
     letter-spacing: 0.4px;
     line-height: 1.389;
     color: $color_2;
@@ -188,11 +189,12 @@ $font-family_6: "Roboto";
     margin: auto;
     margin-right: 70px;
     height: fit-content;
-    font-family: $font-family_3;
+    font-family: "Poppins";
     font-weight: 400;
-    font-size: 23px;
+    font-size: 20px;
     letter-spacing: 0.4px;
     line-height: 1.25;
+    text-align: justify;
     color: $color_3;
     width: 100%;
   }
@@ -206,7 +208,7 @@ $font-family_6: "Roboto";
     height: fit-content;
     flex-direction: row;
     justify-content: space-between;
-    padding: 50px 50px 50px 0;
+    padding: 71px 50px 50px 0;
     box-sizing: border-box;
   }
 
@@ -238,8 +240,12 @@ $font-family_6: "Roboto";
     justify-content: center;
     padding: 0px 0px 0 0px;
     width: 100%;
-    top: -10px;
+    top: 8px;
     box-sizing: border-box;
+
+    @include mobileStyles {
+      top: -10px;
+    }
   }
   .vector-5AU {
     background: #73976b;
@@ -385,7 +391,7 @@ $font-family_6: "Roboto";
     .furnifit-established-in-2024-is-aresponse-to-the-common-issue-faced-by-many-people-when-purchasing-furniture-uncertainty-about-placement-with-aclear-vision-furnifit-was-founded-with-the-goal-of-convincing-consumers-to-choose-products-that-align-with-their-desires-through-the-integration-of-augmented-reality-ar-technology-in-the-spaces-they-desire {
       text-align: center;
       margin-right: 70px;
-      font-size: 18px;
+      font-size: 16px;
     }
     .image-28 {
       top: 10px;
@@ -400,8 +406,8 @@ $font-family_6: "Roboto";
     }
     .founded-by-agroup-of-informatics-students-department-in-president-university-furnifit-is-not-just-an-academic-project-but-also-an-expression-of-commitment-to-bring-innovative-solutions-this-team-consists-of-rizvany-aisyah-anisya-niken-manik-kartika-nirmala-pusparatna-and-yusi-roziana-who-combine-the-knowledge-and-skills-they-acquired-during-their-study-to-bring-technological-convenience-into-everyday-life {
       margin: 0 0 0 0;
-      padding: 60px 70px 60px 70px;
-      text-align: left;
+      padding: 60px 50px 60px 50px;
+      text-align: center;
       height: fit-content;
       font-size: 13px;
       line-height: 1.25;
@@ -417,8 +423,8 @@ $font-family_6: "Roboto";
       top: 857px;
     }
     .with-the-implementation-of-cutting-edge-technologies-such-as-augmented-reality-and-machine-learning-furnifit-is-determined-to-become-areliable-partner-for-many-people-in-arranging-spaces-with-the-right-furniture-thus-furnifit-is-not-just-an-ordinary-ar-platform-but-acomprehensive-solution-that-helps-overcome-doubts-and-uncertainties-in-the-furniture-purchasing-process {
-      padding: 70px 30px 70px 30px;
-      font-size: 20px;
+      padding: 109px 30px 70px 30px;
+      font-size: 15px;
       box-sizing: border-box;
       width: 100%;
     }
@@ -503,9 +509,84 @@ $font-family_6: "Roboto";
       z-index: 2000;
       color: $color_1;
     }
-    .active {
-      border-bottom: 0px solid #73976b; /* Menghapus garis bawah */
-      text-shadow: 2px 6px 4px rgba(0, 0, 0, 0.5); /* Menambah bayangan dengan offset (2px, 2px), blur radius 4px, dan warna hitam dengan opacity 0.5 */
-    }
   }
+}
+
+// FOR NAV
+.group-230 {
+  margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.nav-MobLP {
+  border-bottom: 0.8px solid #858585;
+  background: rgba(212, 222, 210, 0.71);
+  display: none;
+  flex-direction: row;
+  width: 100%;
+  height: 72.8px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.home {
+  margin: 0 0 0 10px; /* Sesuaikan margin agar berada di atas line */
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: $font-family_2;
+  max-width: fit-content;
+  font-weight: 400;
+  font-size: 24px;
+  color: $color_10;
+  text-decoration: none;
+  margin-left: 42px;
+
+  strong {
+    margin-left: 10vw;
+  }
+}
+.recommendation {
+  margin: 17px 0 14px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: $font-family_2;
+  font-weight: 400;
+  font-size: 24px;
+  color: $color_10;
+  text-decoration: none;
+
+  @include mobileStyles {
+    font-family: "Poppins";
+  font-size: 22px;
+  }
+}
+.furniture {
+  margin: 17px 0 14px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: $font-family_2;
+  font-weight: 400;
+  font-size: 24px;
+  color: $color_10;
+  text-decoration: none;
+}
+.about {
+  margin: 17px 0px 14px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: $font-family_2;
+  font-weight: 400;
+  font-size: 24px;
+  color: $color_10;
+  text-decoration: none;
+}
+.elegant-logo-2 {
+  background: url("../assets/ElegantLogo2.webp") 50% / cover no-repeat;
+  width: 172px;
+  height: 70px;
 }

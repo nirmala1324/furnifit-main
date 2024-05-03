@@ -3,6 +3,10 @@ import "../styles/landing_page.scss";
 import { NavLink, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
+// Material UI
+import CloseIcon from '@mui/icons-material/Close';
+import MenuIcon from '@mui/icons-material/Menu';
+
 const LandingPage = () => {
   const navigate = useNavigate();
   const [isNavbarFixed, setIsNavbarFixed] = useState(false);
@@ -55,8 +59,9 @@ const LandingPage = () => {
             className="clarityvmw-app-lineLP"
             onClick={() => setMenuOpen(!menuOpen)}
           >
+            <MenuIcon style={{fontSize: "42px", color: "#4b4b4b"}}/>
             <div className={menuOpen ? "nav-page-mob-resiveLP" : ""}>
-              <div className="closenavLP" />
+              {menuOpen && <div className="closenavLP"><CloseIcon style={{fontSize: '31px', marginTop: '-9px', marginRight: '-6px', color: '#4b4b4b'}}/></div>}
               <div className="elegant-logo-21LP"></div>
               {menuOpen && (
                 <>
@@ -73,7 +78,7 @@ const LandingPage = () => {
                     Furniture
                   </NavLink>
                   <NavLink to="/about-us" className="about">
-                    About
+                    About Us
                   </NavLink>
                 </>
               )}
@@ -99,7 +104,7 @@ const LandingPage = () => {
               </span>
             </div>
             <div className="container-5">
-              <span className="titleser">Our Services</span>
+              <span className="titleser">OUR SERVICES</span>
               <div className="container-10">
                 <div className="image-16"></div>
                 <div className="container-1">
@@ -187,7 +192,7 @@ const LandingPage = () => {
               </div>
               <div className="nav-footer">
                 <Link to="/AboutUsPage" className="about-us">
-                  About
+                  About Us
                 </Link>
               </div>
             </div>

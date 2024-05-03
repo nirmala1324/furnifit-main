@@ -1,63 +1,87 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "../styles/about_us_page.scss";
 
+// Material UI
+import CloseIcon from '@mui/icons-material/Close';
+import MenuIcon from '@mui/icons-material/Menu';
+
 const AboutUsPage = () => {
+  const navigate = useNavigate();
+  const [isNavbarFixed, setIsNavbarFixed] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const navbar = document.querySelector(".nav");
+      const distanceFromTop = navbar.offsetTop;
+
+      if (window.pageYOffset > distanceFromTop) {
+        setIsNavbarFixed(true);
+      } else {
+        setIsNavbarFixed(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <>
       <div className="about-us-page">
-        <div className="group-230AU">
-          <div className="navAU">
-            <div className="elegant-logo-2AU"></div>
-            <NavLink to="/LandingPage" className="homeAU">
-              Home
+      <div className="group-230">
+          <div className={`nav ${isNavbarFixed ? "fixed" : ""}`}>
+            <div className="elegant-logo-2"></div>
+            <NavLink to="/" className="home">
+              <strong>Home</strong>
             </NavLink>
-            <NavLink
-              to="/recommendation"
-              className="recommendationAU"
-            >
+            <NavLink to="/recommendation" className="recommendation">
               Recommendation
             </NavLink>
-            <NavLink to="/furniture-page" className="furnitureAU">
+            <NavLink to="/furniture-page" className="furniture">
               Furniture
             </NavLink>
-            <NavLink to="/about-us" className="aboutAU">
+            <NavLink to="/about-us" className="about">
               About
             </NavLink>
           </div>
         </div>
-        <div className="nav-MobAU">
+        <div className="nav-MobLP">
           <div
-            className="clarityvmw-app-line"
+            className="clarityvmw-app-lineLP"
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            <div className={menuOpen ? "nav-page-mob-resive" : ""}>
-              <div className="closenav" />
-              <div className="elegant-logo-21"></div>
+            <MenuIcon style={{fontSize: "42px", color: "#4b4b4b"}}/>
+            <div className={menuOpen ? "nav-page-mob-resiveLP" : ""}>
+              {menuOpen && <div className="closenavLP"><CloseIcon style={{fontSize: '31px', marginTop: '-9px', marginRight: '-6px', color: '#4b4b4b'}}/></div>}
+              <div className="elegant-logo-21LP"></div>
               {menuOpen && (
                 <>
-                  <NavLink to="/LandingPage" className="homeAU">
-                    Home
+                  <NavLink to="/" className="home">
+                    <b>Home</b>
                   </NavLink>
                   <NavLink
-                    to="/RecommendationPageRevise"
-                    className="recommendationAU"
+                    to="/recommendation"
+                    className="recommendation"
                   >
                     Recommendation
                   </NavLink>
-                  <NavLink to="/FurniturePageRevise" className="furnitureAU">
+                  <NavLink to="/furniture-page" className="furniture">
                     Furniture
                   </NavLink>
-                  <NavLink to="/AboutUsPage" className="aboutAU">
-                    About
+                  <NavLink to="/about-us" className="about">
+                    About Us
                   </NavLink>
                 </>
               )}
             </div>
           </div>
-          <div className="elegant-logo-4-crop-1AU"></div>
+          <div className="elegant-logo-4-crop-1LP"></div>
         </div>
 
         <div className="landingAU">

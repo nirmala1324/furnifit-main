@@ -15,8 +15,8 @@ $color_10: #3b5d50;
 $color_11: #c6d51c;
 $font-family_1: "Poppins";
 $font-family_2: "Poly";
-$font-family_3: "Roboto";
-$font-family_4: "Bevan";
+$font-family_3: "Poppins";
+$font-family_4: "Poppins";
 $font-family_5: "Buda";
 
 .landing-page-revise-1 {
@@ -32,26 +32,24 @@ $font-family_5: "Buda";
   margin: auto;
   .container-13 {
     background: url("../assets/5.webp") 50% / cover no-repeat;
-    margin: 0 16.4px 6px 16.4px;
-    align-self: flex-start;
     width: 37.6px;
     height: 43.01px;
   }
   .why-choose-us {
-    padding-bottom: 40px;
+    padding-bottom: 87px;
     display: inline-block;
     align-self: center;
     overflow-wrap: break-word;
     font-family: $font-family_1;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 45px;
     line-height: 0.911;
-    color: $color_1;
+    color: #4b4b4b;
   }
   .wcu-4 {
     border-radius: 20px;
     width: 100%;
-    margin: 0 70px 1px 0px;
+    align-items: center;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -67,9 +65,7 @@ $font-family_5: "Buda";
     color: $color_2;
   }
   .helpful {
-    margin: 0 0.5px 13.9px 0.5px;
     display: inline-block;
-    align-self: flex-start;
     overflow-wrap: break-word;
     font-family: $font-family_1;
     font-weight: 600;
@@ -80,10 +76,16 @@ $font-family_5: "Buda";
   .wcu-3 {
     border-radius: 20px;
     width: 100%;
-    margin: 0 100px 1px 0;
+    align-items: center;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+  }
+  .wcu-1,
+  .wcu-2,
+  .wcu-3,
+  .wcu-4 {
+    gap: 1.3vw;
   }
   .no-worry-of-misplaced-you-be-able-to-displays-3-dfurniture-models-in-real-time-camera-view {
     overflow-wrap: break-word;
@@ -95,9 +97,7 @@ $font-family_5: "Buda";
     color: $color_2;
   }
   .real-time {
-    margin: 0 0.5px 13.9px 0.5px;
     display: inline-block;
-    align-self: flex-start;
     overflow-wrap: break-word;
     font-family: $font-family_1;
     font-weight: 600;
@@ -108,8 +108,8 @@ $font-family_5: "Buda";
   .wcu-2 {
     border-radius: 20px;
     width: 100%;
-    margin: 0 100px 29px 0;
     display: flex;
+    align-items: center;
     flex-direction: column;
     box-sizing: border-box;
   }
@@ -124,9 +124,7 @@ $font-family_5: "Buda";
     color: $color_2;
   }
   .easy-to-use {
-    margin-bottom: 17px;
     display: inline-block;
-    align-self: flex-start;
     overflow-wrap: break-word;
     font-family: $font-family_1;
     font-weight: 600;
@@ -136,9 +134,9 @@ $font-family_5: "Buda";
   }
   .wcu-1 {
     border-radius: 20px;
-    margin: 0 100px 29px 0;
     display: flex;
     width: 100%;
+    align-items: center;
     flex-direction: column;
     box-sizing: border-box;
   }
@@ -152,9 +150,7 @@ $font-family_5: "Buda";
     color: $color_2;
   }
   .simple {
-    margin: 0 0.5px 14.9px 0.5px;
     display: inline-block;
-    align-self: flex-start;
     overflow-wrap: break-word;
     font-family: $font-family_1;
     font-weight: 600;
@@ -185,87 +181,80 @@ $font-family_5: "Buda";
     color: $color_3;
   }
   .what-is-furni-fit {
-    padding: 0 70px 52.1px 70px;
+    padding: 0 70px 52.1px 0px;
     left: 9.4px;
     display: inline-block;
     overflow-wrap: break-word;
-    font-family: $font-family_2;
-    font-weight: 400;
+    font-family: "Poppins";
+    font-weight: 600;
     font-size: 45px;
     letter-spacing: 0.4px;
     line-height: 1.389;
     color: $color_5;
   }
   .welcome-to-furni-fit-discover-afun-new-way-to-choose-and-place-furniture-in-your-space-with-augmented-reality-ar-technology-simply-use-your-devices-camera-to-see-exactly-how-the-furniture-will-look-in-your-room-by-this-website-we-also-provide-arecommendation-system-to-help-you-determine-whether-the-furniture-placement-is-suitable-or-not-for-your-space-start-exploring-our-collection-now-to-effortlessly-and-accurately-update-your-room {
-    padding: 0 70px 52.1px 70px;
     left: 9.4px;
     display: inline-block;
     overflow-wrap: break-word;
-    font-family: $font-family_2;
-    height: 302.1px;
+    font-family: "Poppins";
+    height: unset;
     font-weight: 400;
-    font-size: 28px;
+    font-size: 25px;
+    text-align: justify;
     letter-spacing: 0.4px;
     line-height: 1.389;
     color: $color_5;
   }
   .titleser {
-    margin: center;
-    padding: 0px 180px 130px 180px;
     align-self: center;
     text-align: center;
     overflow-wrap: break-word;
-    font-family: $font-family_5;
-    font-weight: 300;
+    font-family: "Poppins";
+    font-weight: 600;
     font-size: 60px;
-    letter-spacing: 0.4px;
+    letter-spacing: 2px;
     line-height: 1.25;
     color: $color_2;
   }
   .every-home-is-unique-from-the-living-room-to-the-bedroom-we-provide-personalized-recommendations-tailored-to-your-lifestyle-and-aesthetics-helping-you-create-spaces-that-are-perfect-for-living-and-enjoying {
-    margin-left: 4.8px;
-    margin: 0 4.8px 72.7px 4.8px;
     overflow-wrap: break-word;
-    font-family: $font-family_2;
+    font-family: "Poppins";
     width: 100%;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 24px;
+    text-align: justify;
     letter-spacing: 0.3px;
     line-height: 1.563;
     color: $color_5;
   }
   .furniture-recommendation {
-    margin-bottom: 72.5px;
     display: inline-block;
     align-self: flex-start;
     overflow-wrap: break-word;
-    font-family: $font-family_1;
-    font-weight: 400;
-    font-size: 45px;
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 37px;
     line-height: 0.533;
     color: $color_4;
   }
   .visualize-furniture-in-your-space-instantly-browse-our-wide-range-of-furniture-and-decor-options-on-our-intuitive-web-platform-then-see-them-in-real-time-using-your-smartphone-camera {
     overflow-wrap: break-word;
-    margin: 0 4.8px 72.7px 4.8px;
-    font-family: $font-family_2;
+    font-family: $font-family_1;
     width: 100%;
-    margin-left: 120px;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 24px;
+    text-align: justify;
     letter-spacing: 0.3px;
     line-height: 1.563;
     color: $color_5;
   }
   .ar-furniture {
-    margin: 0 4.8px 72.7px 4.8px;
     display: inline-block;
     align-self: flex-start;
     overflow-wrap: break-word;
     font-family: $font-family_1;
-    margin-left: 120px;
-    font-weight: 400;
-    font-size: 45px;
+    font-weight: 600;
+    font-size: 37px;
     line-height: 0.533;
     color: $color_4;
   }
@@ -281,14 +270,14 @@ $font-family_5: "Buda";
     box-sizing: border-box;
   }
   .nav {
-    border-bottom: 0.8px solid #858585;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
     background: rgba(212, 222, 210, 1);
     position: sticky;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 150px 10px 57px;
+    padding: 10px 27.3vw 10px 57px;
     width: 100%; // Menggunakan lebar 100% agar sesuai dengan lebar layar
     height: fit-content;
     box-sizing: border-box;
@@ -365,8 +354,9 @@ $font-family_5: "Buda";
   }
 
   .augment-your-space-amplify-your-reality {
+    max-width: 57%;
     position: absolute;
-    top: 200px;
+    top: 240px;
     left: 50%;
     right: 50%;
     transform: translateX(-50%);
@@ -377,7 +367,7 @@ $font-family_5: "Buda";
     font-weight: 400;
     font-size: 68px;
     letter-spacing: 2.7px;
-    color: $color_11;
+    color: white;
     width: 100%;
   }
   .introbutt {
@@ -385,52 +375,72 @@ $font-family_5: "Buda";
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    width: 400px;
-    height: 140px;
+    width: 34%;
+    height: 149px;
     position: relative;
     justify-content: center;
     justify-content: space-between;
     padding: 50px 50px 50px 50px;
   }
   .explore-home {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
-    background: #7a9773;
+    background: #4f6949;
     top: 0px;
+    cursor: pointer;
     right: 500px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 9.3px 0 7.1px 1px;
-    width: 130px;
+    align-items: center;
+    width: 45%;
     box-sizing: border-box;
     margin: 0 0px 0 0px;
+
+    @include mobileStyles {
+      width: 68%;
+      height: 55px;
+    }
+  }
+  .explore-home:hover {
+    background: #465e41;
   }
   .explore {
     overflow-wrap: break-word;
     font-family: $font-family_1;
-    font-weight: 400;
+    font-weight: 500;
+    letter-spacing: 2px;
     font-size: 20px;
     color: $color_7;
   }
   .try-now-home {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
-    border: 1px solid #000000;
     background: #e4edec;
     left: 500px;
     top: 0px;
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 9.3px 0 7.1px 1px;
-    width: 130px;
+    align-items: center;
+    width: 45%;
     box-sizing: border-box;
     margin: 0 0px 0 0px;
+
+    @include mobileStyles {
+      width: 68%;
+      height: 55px;
+    }
+  }
+  .try-now-home:hover {
+    background: #d0d5d4;
   }
   .try-now {
     overflow-wrap: break-word;
     font-family: $font-family_1;
-    font-weight: 400;
+    font-weight: 500;
+    letter-spacing: 1px;
     font-size: 20px;
     color: $color_8;
   }
@@ -460,10 +470,10 @@ $font-family_5: "Buda";
   }
   .image-16 {
     mix-blend-mode: multiply;
-    box-shadow: 0px 4px 4px 0px rgba(51, 92, 52, 0.94);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
     border-radius: 30px;
     background: url("../assets/Image14.webp") 50% / cover no-repeat;
-    width: 100%;
+    width: 50%;
     max-width: 701.09px;
     height: 445.1px;
   }
@@ -471,11 +481,12 @@ $font-family_5: "Buda";
     mix-blend-mode: multiply;
     border-radius: 30px;
     background: url("../assets/Image19.webp") 50% / cover no-repeat;
-    width: 100%;
+    width: 50%;
     max-width: 699.2px;
     height: 433.1px;
   }
   .elegant-logo-4-crop-1 {
+    display: none;
     background: url("../assets/ElegantLogo4Crop1.webp") 50% / cover no-repeat;
     margin-bottom: 55px;
     margin-top: 55px;
@@ -484,25 +495,34 @@ $font-family_5: "Buda";
     box-sizing: border-box;
   }
   .container-1 {
-    margin: 20.3px 0 28.1px 0;
+    width: 47%;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    justify-content: center;
+    gap: 10%;
+
+    @include mobileStyles {
+      width: 100%;
+      margin-top: 30px;
+    }
   }
   .container-2 {
     background: url("../assets/2.webp") 50% / cover no-repeat;
-    margin: 0 16.4px 5.1px 16.4px;
-    align-self: flex-start;
     width: 47.2px;
     height: 42px;
   }
   .container-3 {
-    margin: 57.5px 88.6px 29.1px 0;
+    width: 47%;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    justify-content: center;
+    gap: 10%;
   }
   .container-4 {
+    padding-inline: 10vw;
+    height: 642px;
     background: rgba(221, 229, 223, 0.63);
     position: absolute;
     left: 0px;
@@ -510,12 +530,14 @@ $font-family_5: "Buda";
     right: 0px;
     display: flex;
     flex-direction: column;
-    align-items: left;
-    padding: 106.2px 0 97.6px 0;
+    justify-content: center;
     box-sizing: border-box;
     width: 100%;
   }
   .container-5 {
+    padding-inline: 9vw;
+    padding-block: 6vw;
+    gap: 8vw;
     background: #ffffff;
     position: absolute;
     display: flex;
@@ -523,12 +545,11 @@ $font-family_5: "Buda";
     align-items: flex-end;
     top: 1410px;
     width: 100%;
-    padding: 185.3px 168.6px 185.3px 185.3px;
     align-items: center;
     box-sizing: border-box;
   }
   .container-6 {
-    width: 100%;
+    gap: 5%;
     display: flex;
     flex-direction: row;
     width: fit-content;
@@ -545,21 +566,19 @@ $font-family_5: "Buda";
     box-sizing: border-box;
   }
   .container-8 {
-    justify-content: space-between;
+    gap: 4vw;
     display: flex;
     flex-direction: row;
+    text-align: center;
     box-sizing: border-box;
   }
   .container-9 {
     background: url("../assets/4.webp") 50% / cover no-repeat;
-    margin: 0 16.4px 6.1px 16.4px;
-    align-self: flex-start;
     width: 47.2px;
     height: 42px;
   }
   .container-10 {
-    margin: 0 135.5px 60px 0;
-    width: 100%;
+    gap: 5%;
     display: flex;
     position: relative;
     flex-direction: row;
@@ -573,18 +592,17 @@ $font-family_5: "Buda";
     left: 0px;
     right: 0px;
     bottom: 156px;
-    top: 3000px;
+    top: 2868px;
     display: flex;
     height: fit-content;
     flex-direction: column;
     align-items: center;
-    padding: 68px 127.2px 64.1px 127.2px;
+    padding-inline: 10vw;
+    padding-block: 6vw;
     box-sizing: border-box;
   }
   .container-12 {
     background: url("../assets/3.webp") 50% / cover no-repeat;
-    margin: 0 14.9px 4px 14.9px;
-    align-self: flex-start;
     width: 48.2px;
     height: 42px;
   }
@@ -669,6 +687,11 @@ $font-family_5: "Buda";
     font-size: 24px;
     color: $color_10;
     text-decoration: none;
+    margin-left: 42px;
+
+    strong {
+      margin-left: 10vw;
+    }
   }
   .recommendation {
     margin: 17px 0 14px 0;
@@ -680,9 +703,10 @@ $font-family_5: "Buda";
     color: $color_10;
     text-decoration: none;
 
-	@include mobileStyles {
-		font-family: "Poppins";
-	}
+    @include mobileStyles {
+      font-family: "Poppins";
+	  font-size: 22px;
+    }
   }
   .furniture {
     margin: 17px 0 14px 0;
@@ -740,7 +764,6 @@ $font-family_5: "Buda";
     display: none;
   }
   .clarityvmw-app-lineLP {
-    background: url("../assets/8.webp") 50% / cover no-repeat;
     margin: 15px 0px 10px 10px;
     width: 100px;
     height: 47px;
@@ -774,6 +797,9 @@ $font-family_5: "Buda";
     }
     .introbutt {
       top: 250px;
+      width: 100%;
+      height: 30%;
+      flex-direction: column;
       margin-top: 100px;
       align-items: center;
     }
@@ -789,18 +815,22 @@ $font-family_5: "Buda";
       top: 100px;
       margin-top: 40px;
       align-items: center;
-      font-size: 48px;
+      font-size: 36px;
     }
     .container-4 {
+      gap: 6%;
       align-items: center;
-      height: 1100px;
+      height: 665px;
     }
     .what-is-furni-fit {
+      padding: unset;
       font-size: 35px;
+      margin-top: 99px;
       text-align: center;
     }
     .welcome-to-furni-fit-discover-afun-new-way-to-choose-and-place-furniture-in-your-space-with-augmented-reality-ar-technology-simply-use-your-devices-camera-to-see-exactly-how-the-furniture-will-look-in-your-room-by-this-website-we-also-provide-arecommendation-system-to-help-you-determine-whether-the-furniture-placement-is-suitable-or-not-for-your-space-start-exploring-our-collection-now-to-effortlessly-and-accurately-update-your-room {
       height: 500px;
+      font-size: 19px;
       text-align: center;
     }
     .container-5 {
@@ -811,14 +841,14 @@ $font-family_5: "Buda";
       flex-direction: column;
       align-items: center;
       margin-right: 4px;
-      top: 1840px;
+      top: 1456px;
       width: 100%;
       padding: 0px 0px 0px 0px;
       box-sizing: border-box;
     }
     .titleser {
       top: 80px;
-      font-size: 60px;
+      font-size: 41px;
       padding: 0 20px 130px 20px;
       position: relative;
     }
@@ -833,6 +863,7 @@ $font-family_5: "Buda";
       align-self: center;
     }
     .ar-furniture {
+      font-size: 30px;
       position: relative;
       top: 0px;
       margin: 0;
@@ -844,29 +875,32 @@ $font-family_5: "Buda";
       margin: 0;
       padding-right: 30px;
       padding-left: 30px;
-      font-size: 28px;
+      font-size: 19px;
       text-align: center;
       box-sizing: border-box;
     }
     .container-6 {
-      flex-direction: column;
+      margin-top: 60px;
+      flex-direction: column-reverse;
     }
     .container-3 {
+      width: 100%;
       margin: 0;
-      margin-top: 21px;
-      margin-bottom: 21px;
       position: relative;
-      top: 300px;
+      margin-top: 30px;
     }
     .furniture-recommendation {
+      font-size: 30px;
+      max-width: 411px;
       text-align: center;
       line-height: 1;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
+      margin-top: 35px;
     }
     .every-home-is-unique-from-the-living-room-to-the-bedroom-we-provide-personalized-recommendations-tailored-to-your-lifestyle-and-aesthetics-helping-you-create-spaces-that-are-perfect-for-living-and-enjoying {
       text-align: center;
       margin: 0;
-      font-size: 28px;
+      font-size: 19px;
       padding-left: 30px;
       padding-right: 30px;
       text-align: center;
@@ -876,17 +910,17 @@ $font-family_5: "Buda";
       width: 80%;
       height: 241px;
       align-self: center;
-      top: -430px;
       position: relative;
     }
     .container-11 {
-      top: 3550px;
-      padding: 20px 20px 20px 20px;
+      top: 2953px;
+      padding-block: 100px;
     }
     .why-choose-us {
       font-size: 35px;
     }
     .container-8 {
+      gap: 58px;
       flex-direction: column;
       padding: 0 20px 0 20px;
     }
@@ -976,11 +1010,19 @@ $font-family_5: "Buda";
       display: inline-block;
       overflow-wrap: break-word;
       font-family: $font-family_1;
-      font-size: 24px;
+      font-size: 22px;
       color: $color_10;
     }
     .active {
       border-bottom: 0px solid #73976b; /* Menghapus garis bawah */
     }
   }
+}
+.clarityvmw-app-line {
+  background: url("../assets/8.webp") 50% / cover no-repeat;
+  margin: 15px 0px 10px 10px;
+  width: 100px;
+  height: 47px;
+  display: none;
+  box-sizing: border-box;
 }

@@ -199,7 +199,7 @@ const FurnituresPage = () => {
         {/* Pagination */}
         {searchData.length === 0 && (
             <div style={{ display: "flex", justifyContent: "center", marginTop: "60px", marginBottom: "114px" }}>
-              <Pagination count={totalPages} page={page} onChange={handlePageChange} />
+              <Pagination count={totalPages} page={page} onChange={handlePageChange} style={{zIndex: "4"}} />
             </div>
           )}
         </div>
