@@ -457,7 +457,7 @@ $font-family_5: "Buda";
   }
   .image-14 {
     mix-blend-mode: darken;
-    background: url("../assets/Image14.webp") 50% / cover no-repeat;
+    background: url("../assets/bg-landing-main.webp") 50% / cover no-repeat;
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -466,13 +466,13 @@ $font-family_5: "Buda";
     right: 0px;
     height: 670px;
     width: 100%;
-    filter: brightness(0.7); /* Ubah nilai ini untuk menyesuaikan kegelapan */
+    filter: brightness(0.5); /* Ubah nilai ini untuk menyesuaikan kegelapan */
   }
   .image-16 {
     mix-blend-mode: multiply;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
     border-radius: 30px;
-    background: url("../assets/Image14.webp") 50% / cover no-repeat;
+    background: url("../assets/Image16.webp") 50% / cover no-repeat;
     width: 50%;
     max-width: 701.09px;
     height: 445.1px;
@@ -684,13 +684,13 @@ $font-family_5: "Buda";
     font-family: $font-family_4;
     max-width: fit-content;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 20px;
     color: $color_10;
     text-decoration: none;
     margin-left: 42px;
 
     strong {
-      margin-left: 10vw;
+      margin-left: 5vw;
     }
   }
   .recommendation {
@@ -699,7 +699,7 @@ $font-family_5: "Buda";
     overflow-wrap: break-word;
     font-family: $font-family_4;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 20px;
     color: $color_10;
     text-decoration: none;
 
@@ -714,7 +714,7 @@ $font-family_5: "Buda";
     overflow-wrap: break-word;
     font-family: $font-family_4;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 20px;
     color: $color_10;
     text-decoration: none;
   }
@@ -724,7 +724,7 @@ $font-family_5: "Buda";
     overflow-wrap: break-word;
     font-family: $font-family_4;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 20px;
     color: $color_10;
     text-decoration: none;
   }

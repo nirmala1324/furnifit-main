@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, NavLink } from "react-router-dom";
 import axios from "axios";
 import "../styles/detail_furni_page.scss";
 
 // IMPORTING ICONS
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Chip } from "@mui/material";
+
+// Material UI
+import CloseIcon from "@mui/icons-material/Close";
+import MenuIcon from "@mui/icons-material/Menu";
+import LoadingPage from "./LoadingPage";
 
 const DetailFurniPage = () => {
   const navigate = useNavigate();
@@ -26,26 +31,98 @@ const DetailFurniPage = () => {
     fetchData();
   }, [furni_id]);
 
+  // navbar
+  const [isNavbarFixed, setIsNavbarFixed] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const navbar = document.querySelector(".nav");
+      if (navbar) {
+        const distanceFromTop = navbar.offsetTop;
+
+        if (window.pageYOffset > distanceFromTop) {
+          setIsNavbarFixed(true);
+        } else {
+          setIsNavbarFixed(false);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
       {Object.keys(furnitureData).length > 0 ? (
         <div className="furniture-page-revise">
-          <div className="nav">
-            <div className="elegant-logo-2"></div>
-            <div className="home">Home</div>
-            <div className="recommendation">Recommendation</div>
-            <div className="container-line">
-              <div className="furniture" onClick={() => navigate("/furniture-page")}>Furniture</div>
-              <div className="group-229">
-                <div className="line-1"></div>
+          <div className="group-230">
+            <div className={`nav ${isNavbarFixed ? "fixed" : ""}`}>
+              <div className="elegant-logo-2"></div>
+              <NavLink to="/" className="home">
+                Home
+              </NavLink>
+              <NavLink to="/recommendation" className="recommendation">
+                Recommendation
+              </NavLink>
+              <NavLink to="/furniture-page" className="furniture">
+                <strong>Furniture</strong>
+              </NavLink>
+              <NavLink to="/about-us" className="about">
+                About Us
+              </NavLink>
+            </div>
+          </div>
+          <div className="nav-MobLP">
+            <div
+              className="clarityvmw-app-lineLP"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              <MenuIcon style={{ fontSize: "42px", color: "#4b4b4b" }} />
+              <div className={menuOpen ? "nav-page-mob-resiveLP" : ""}>
+                {menuOpen && (
+                  <div className="closenavLP">
+                    <CloseIcon
+                      style={{
+                        fontSize: "31px",
+                        marginTop: "-9px",
+                        marginRight: "-6px",
+                        color: "#4b4b4b",
+                      }}
+                    />
+                  </div>
+                )}
+                <div className="elegant-logo-21LP"></div>
+                {menuOpen && (
+                  <>
+                    <NavLink to="/" className="home">
+                      Home
+                    </NavLink>
+                    <NavLink to="/recommendation" className="recommendation">
+                      Recommendation
+                    </NavLink>
+                    <NavLink to="/furniture-page" className="furniture">
+                      <b>Furniture</b>
+                    </NavLink>
+                    <NavLink to="/about-us" className="about">
+                      About Us
+                    </NavLink>
+                  </>
+                )}
               </div>
             </div>
-            <div className="about">About</div>
-            <div className="user-cicrle-duotone"></div>
+            <div className="elegant-logo-4-crop-1LP"></div>
           </div>
           <div className="content-container">
             <div className="breadcrumb">
-              <p className="link1" onClick={() => navigate("/furniture-page")}>Furniture</p>
+              <p className="link1" onClick={() => navigate("/furniture-page")}>
+                Furniture
+              </p>
               <ArrowForwardIosIcon sx={{ fontSize: 20 }} />
               <p className="bread-name">{furnitureData.furni_name}</p>
             </div>
@@ -63,7 +140,9 @@ const DetailFurniPage = () => {
                 />
               </div>
               <div className="right-container">
-                <div className="furni-name-scnd">{furnitureData.furni_name}</div>
+                <div className="furni-name-scnd">
+                  {furnitureData.furni_name}
+                </div>
                 <div className="furni-subspace subtitle">
                   {furnitureData.space_cat}
                 </div>
@@ -94,7 +173,11 @@ const DetailFurniPage = () => {
                   <div className="value div10">
                     : &nbsp;&nbsp;
                     {furnitureData.material_tag.map((tag, index) => (
-                      <Chip key={index} label={tag} style={{marginRight: "3px"}} />
+                      <Chip
+                        key={index}
+                        label={tag}
+                        style={{ marginRight: "3px" }}
+                      />
                     ))}
                   </div>
                 </div>
@@ -129,7 +212,7 @@ const DetailFurniPage = () => {
           </div>
         </div>
       ) : (
-        <div>Loading...</div>
+        <LoadingPage />
       )}
     </>
   );

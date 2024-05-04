@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import React, { useEffect, useState, useRef } from "react";
 import "../styles/recommend_page.scss";
 import axios from "axios";
@@ -16,6 +16,10 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
+
+// Material UI
+import CloseIcon from "@mui/icons-material/Close";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const ChipModal = ({ open, handleClose, receiveRecommendData }) => {
   // Fungsi khusus untuk modal
@@ -321,21 +325,71 @@ export const RecommendPage = () => {
     navigate(`/detail-furniture/${furni_id}`);
   };
 
+  // navbar
+  const [isNavbarFixed, setIsNavbarFixed] = useState(false);
+
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
       <div className="furniture-page-revise">
-        <div className="nav">
-          <div className="elegant-logo-2"></div>
-          <div className="home">Home</div>
-          <div className="recommendation">Recommendation</div>
-          <div className="container-line">
-            <div className="furniture">Furniture</div>
-            <div className="group-229">
-              <div className="line-1"></div>
+        <div className="group-230">
+          <div className={`nav ${isNavbarFixed ? "fixed" : ""}`}>
+            <div className="elegant-logo-2"></div>
+            <div onClick={() => navigate("/")} style={{cursor: "pointer"}} className="home">
+              Home
+            </div>
+            <NavLink to="/recommendation" className="recommendation">
+              <strong>Recommendation</strong>
+            </NavLink>
+            <NavLink to="/furniture-page" className="furniture">
+              Furniture
+            </NavLink>
+            <NavLink to="/about-us" className="about">
+              About Us
+            </NavLink>
+          </div>
+        </div>
+        <div className="nav-MobLP">
+          <div
+            className="clarityvmw-app-lineLP"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <MenuIcon style={{ fontSize: "42px", color: "#4b4b4b" }} />
+            <div className={menuOpen ? "nav-page-mob-resiveLP" : ""}>
+              {menuOpen && (
+                <div className="closenavLP">
+                  <CloseIcon
+                    style={{
+                      fontSize: "31px",
+                      marginTop: "-9px",
+                      marginRight: "-6px",
+                      color: "#4b4b4b",
+                    }}
+                  />
+                </div>
+              )}
+              <div className="elegant-logo-21LP"></div>
+              {menuOpen && (
+                <>
+                  <NavLink to="/" className="home">
+                    Home
+                  </NavLink>
+                  <NavLink to="/recommendation" className="recommendation">
+                    <b>Recommendation</b>
+                  </NavLink>
+                  <NavLink to="/furniture-page" className="furniture">
+                    Furniture
+                  </NavLink>
+                  <NavLink to="/about-us" className="about">
+                    About Us
+                  </NavLink>
+                </>
+              )}
             </div>
           </div>
-          <div className="about">About</div>
-          <div className="user-cicrle-duotone"></div>
+          <div className="elegant-logo-4-crop-1LP"></div>
         </div>
         <div className="landing">
           {/* HERO CONTAINER */}

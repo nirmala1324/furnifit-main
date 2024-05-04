@@ -23,10 +23,27 @@
     flex-direction: row;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-    font-family: 'poppins';
+    font-family: "poppins";
+
+    @include mobileStyles {
+      flex-direction: column;
+      aspect-ratio: unset;
+      width: unset;
+      height: 90%;
+      background: unset;
+      background-color: #a3b99f;
+    }
 
     .logo-container {
       width: 50%;
+
+      @include mobileStyles {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
       .logo-div {
         width: 37%;
         filter: invert(100%) brightness(169%);
@@ -35,23 +52,38 @@
 
         aspect-ratio: 500/ 114;
         height: unset;
-        background: url("../assets/pc_logo_long_1.webp") center/cover
-          no-repeat;
+        background: url("../assets/pc_logo_long_1.webp") center/cover no-repeat;
+
+        @include mobileStyles {
+          margin-top: 12%;
+          margin-left: unset;
+        }
       }
     }
 
     .error-text-container {
-        color: white;
-        width: 50%;
+      color: white;
+      width: 50%;
       display: flex;
       flex-direction: column;
       font-size: 10px;
 
       justify-content: center;
-      
+
+      @include mobileStyles {
+        width: 96%;
+        height: 80%;
+        gap: 2%;
+        padding-inline: 9%;
+      }
+
       .title {
         font-weight: 600;
         font-size: 112px;
+
+        @include mobileStyles {
+          font-size: 100px;
+        }
       }
 
       .subtitle {

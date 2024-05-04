@@ -33,7 +33,7 @@
 .content-container {
   width: 83%;
   height: 100%;
-  margin-top: 91px;
+  margin-top: 21px;
   font-family: "poppins";
 
   display: flex;
@@ -215,26 +215,19 @@
   }
 }
 
-.furniture-page-revise .nav {
-  align-items: center;
-  border-bottom: 0.8px solid #858585;
+.nav {
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
   background: rgba(212, 222, 210, 1);
+  position: sticky;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-  padding: 10px 79px 10px 57px;
-  width: 100%;
-  max-width: 1920px; // Menggunakan lebar 100% agar sesuai dengan lebar layar
+  padding: 10px 27.3vw 10px 57px;
+  width: 100%; // Menggunakan lebar 100% agar sesuai dengan lebar layar
   height: fit-content;
   box-sizing: border-box;
   transition: top 0.3s; // Efek transisi ketika navbar bergeser
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  max-width: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000; /* Pastikan navbar selalu berada di atas konten */
 }
 
 .line-1 {
@@ -333,6 +326,10 @@
   width: 100%;
   height: fit-content;
   box-sizing: border-box;
+
+  @include mobileStyles {
+    top: -5px;
+  }
 }
 .container-top {
   position: relative;
@@ -387,11 +384,10 @@
 }
 
 .furniture-page-revise .home {
-  margin: 17px 0 14px 0;
+  margin-left: 9vw;
   display: inline-block;
   overflow-wrap: break-word;
   font-family: "poppins";
-  font-weight: 600;
   font-size: 20px;
   color: #3b5d50;
 
@@ -405,7 +401,6 @@
   display: inline-block;
   overflow-wrap: break-word;
   font-family: "poppins";
-  font-weight: 600;
   font-size: 20px;
   color: #3b5d50;
 
@@ -419,7 +414,6 @@
   display: inline-block;
   overflow-wrap: break-word;
   font-family: "poppins";
-  font-weight: 600;
   font-size: 20px;
   color: #3b5d50;
 
@@ -433,7 +427,6 @@
   display: inline-block;
   overflow-wrap: break-word;
   font-family: "poppins";
-  font-weight: 600;
   font-size: 20px;
   color: #3b5d50;
 
@@ -535,4 +528,15 @@
   line-height: 1.4;
   color: #73976b;
   cursor: pointer;
+}
+
+@media screen and (max-width: 470px) {
+  .landing-page-revise-1 .nav-page-mob-resiveLP .home, .landing-page-revise-1 .nav-page-mob-LP .recommendation, .landing-page-revise-1 .nav-page-mob-resiveLP .furniture, .landing-page-revise-1 .nav-page-mob-resiveLP .about {
+      margin: 17px 0 14px 0;
+      display: inline-block;
+      overflow-wrap: break-word;
+      font-family: "Poppins";
+      font-size: 22px;
+      color: #3b5d50;
+  }
 }

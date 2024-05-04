@@ -38,7 +38,7 @@ const AboutUsPage = () => {
           <div className={`nav ${isNavbarFixed ? "fixed" : ""}`}>
             <div className="elegant-logo-2"></div>
             <NavLink to="/" className="home">
-              <strong>Home</strong>
+              Home
             </NavLink>
             <NavLink to="/recommendation" className="recommendation">
               Recommendation
@@ -47,7 +47,7 @@ const AboutUsPage = () => {
               Furniture
             </NavLink>
             <NavLink to="/about-us" className="about">
-              About
+              <strong>About Us</strong>
             </NavLink>
           </div>
         </div>
@@ -63,7 +63,7 @@ const AboutUsPage = () => {
               {menuOpen && (
                 <>
                   <NavLink to="/" className="home">
-                    <b>Home</b>
+                    Home
                   </NavLink>
                   <NavLink
                     to="/recommendation"
@@ -75,7 +75,7 @@ const AboutUsPage = () => {
                     Furniture
                   </NavLink>
                   <NavLink to="/about-us" className="about">
-                    About Us
+                    <b>About Us</b>
                   </NavLink>
                 </>
               )}
@@ -132,7 +132,7 @@ const AboutUsPage = () => {
             </div>
             <div className="nav-footerAU">
               <Link to="/AboutUsPage" className="about-usAU">
-                About
+                About Us
               </Link>
             </div>
           </div>
