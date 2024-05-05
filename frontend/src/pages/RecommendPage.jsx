@@ -117,6 +117,9 @@ const ChipModal = ({ open, handleClose, receiveRecommendData }) => {
                   "Dressing Room",
                   "Living Room",
                   "Kitchen",
+                  "Terrace",
+                  "Balcony",
+                  "Bars",
                 ].map((chip) => (
                   <Chip
                     sx={{ mr: 0.5, mt: 0.7 }}
@@ -139,7 +142,7 @@ const ChipModal = ({ open, handleClose, receiveRecommendData }) => {
                 {[
                   "Modern",
                   "Classy",
-                  "Minimalist",
+                  "Minimalism",
                   "Traditional",
                   "Industrial",
                   "Scandinavian",
@@ -189,6 +192,8 @@ const ChipModal = ({ open, handleClose, receiveRecommendData }) => {
                   "Chair",
                   "Dining Table",
                   "Seat/Bench",
+                  "Kitchen Island",
+                  "Dresser",
                 ].map((chip) => (
                   <Chip
                     sx={{ mr: 0.5, mt: 0.7 }}
@@ -214,7 +219,7 @@ const ChipModal = ({ open, handleClose, receiveRecommendData }) => {
                   "Metal",
                   "Rubber",
                   "Glass",
-                  "bamboo",
+                  "Bamboo",
                   "Plastic",
                   "Acrylic",
                   "Foam",
