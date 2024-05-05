@@ -116,7 +116,7 @@ const FurnituresPage = () => {
     setIsLoading(true); // Set loading state to true when initiating search
 
     axios
-      .post("/search", { user_query: searchValue })
+      .post("https://backend-main-frf8.onrender.com/search", { user_query: searchValue })
       .then((response) => {
         setSearchData(response.data);
         setConditionalData(response.data); // Update conditionalData directly with the fetched search results
