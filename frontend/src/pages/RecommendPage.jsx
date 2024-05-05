@@ -57,7 +57,7 @@ const ChipModal = ({ open, handleClose, receiveRecommendData }) => {
   const handleSubmit = async () => {
     console.log(fieldChips);
     try {
-      const response = await axios.post("/recommend", {
+      const response = await axios.post("https://backend-main-frf8.onrender.com/recommend", {
         inputData: fieldChips,
       });
       const recommendData = response.data.recommended_products;
