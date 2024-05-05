@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import "../styles/about_us_page.scss";
 
 // Material UI
-import CloseIcon from '@mui/icons-material/Close';
-import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from "@mui/icons-material/Close";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const AboutUsPage = () => {
   const navigate = useNavigate();
@@ -34,7 +34,7 @@ const AboutUsPage = () => {
   return (
     <>
       <div className="about-us-page">
-      <div className="group-230">
+        <div className="group-230">
           <div className={`nav ${isNavbarFixed ? "fixed" : ""}`}>
             <div className="elegant-logo-2"></div>
             <NavLink to="/" className="home">
@@ -56,19 +56,27 @@ const AboutUsPage = () => {
             className="clarityvmw-app-lineLP"
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            <MenuIcon style={{fontSize: "42px", color: "#4b4b4b"}}/>
+            <MenuIcon style={{ fontSize: "42px", color: "#4b4b4b" }} />
             <div className={menuOpen ? "nav-page-mob-resiveLP" : ""}>
-              {menuOpen && <div className="closenavLP"><CloseIcon style={{fontSize: '31px', marginTop: '-9px', marginRight: '-6px', color: '#4b4b4b'}}/></div>}
+              {menuOpen && (
+                <div className="closenavLP">
+                  <CloseIcon
+                    style={{
+                      fontSize: "31px",
+                      marginTop: "-9px",
+                      marginRight: "-6px",
+                      color: "#4b4b4b",
+                    }}
+                  />
+                </div>
+              )}
               <div className="elegant-logo-21LP"></div>
               {menuOpen && (
                 <>
                   <NavLink to="/" className="home">
                     Home
                   </NavLink>
-                  <NavLink
-                    to="/recommendation"
-                    className="recommendation"
-                  >
+                  <NavLink to="/recommendation" className="recommendation">
                     Recommendation
                   </NavLink>
                   <NavLink to="/furniture-page" className="furniture">

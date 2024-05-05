@@ -21,6 +21,26 @@ import spacy
 from googletrans import Translator
 from flask_caching import Cache
 
+import os
+from os.path import join, dirname
+from dotenv import load_dotenv
+
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
+MONGODB_URI = os.environ.get("MONGODB_URI")
+DB_NAME =  os.environ.get("DB_NAME")
+COLLECTION_NAME = os.environ.get("COLLECTION_NAME")
+
+# MONGODB connection details ==========================================
+client = MongoClient(MONGODB_URI)  # Assuming MongoDB is running locally on the default port
+
+# Accessing the database
+db = client[DB_NAME]
+
+# Accessing the collection
+collection = db[COLLECTION_NAME]
+
 app = Flask(__name__)
 
 # Configure CORS
@@ -30,14 +50,6 @@ CORS(app)
 cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 
 
-# MONGODB connection details ==========================================
-client = MongoClient('mongodb+srv://nirmalapusparatna20031107:npr20031107@cluster0.cqhgovi.mongodb.net/')  # Assuming MongoDB is running locally on the default port
-
-# Accessing the database
-db = client['dbfurnifit']
-
-# Accessing the collection
-collection = db['furnitures']
 
 
 
@@ -128,7 +140,7 @@ nltk.download('wordnet')
 nltk.download('stopwords')
 nltk.download('maxent_ne_chunker')
 nltk.download('words')
-nlp = spacy.load("en_core_web_sm")
+nlp = spacy.load("en_core_web_trf")
 
 # Define preprocessing functions
 
