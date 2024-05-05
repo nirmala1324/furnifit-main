@@ -50,7 +50,7 @@ const FurnituresPage = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`/api/furnitures?page=${page}`);
+      const response = await axios.get(`https://backend-main-frf8.onrender.com/api/furnitures?page=${page}`);
       setData(response.data.furnitureData);
       setTotalPages(Math.ceil(response.data.totalItems / itemsPerPage));
     } catch (error) {

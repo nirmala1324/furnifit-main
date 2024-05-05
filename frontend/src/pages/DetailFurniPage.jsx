@@ -21,7 +21,7 @@ const DetailFurniPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`/api/furniture/${furni_id}`);
+        const response = await axios.get(`https://backend-main-frf8.onrender.com/api/furniture/${furni_id}`);
         setFurnitureData(response.data);
       } catch (error) {
         console.error("Error fetching furniture data:", error);
