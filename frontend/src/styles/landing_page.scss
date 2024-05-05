@@ -728,9 +728,6 @@ $font-family_5: "Buda";
     color: $color_10;
     text-decoration: none;
   }
-  .active {
-    border-bottom: 5px solid #73976b; /* Misalnya, garis bawah putih dengan lebar 2px */
-  }
 
   .elegant-logo-2 {
     background: url("../assets/ElegantLogo2.webp") 50% / cover no-repeat;
@@ -1014,9 +1011,6 @@ $font-family_5: "Buda";
       font-family: $font-family_1;
       font-size: 22px;
       color: $color_10;
-    }
-    .active {
-      border-bottom: 0px solid #73976b; /* Menghapus garis bawah */
     }
   }
 }
