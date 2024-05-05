@@ -13,9 +13,6 @@ import FurnituresPage from "./pages/FurniturePage";
 import DetailFurniPage from "./pages/DetailFurniPage";
 import { RecommendPage } from "./pages/RecommendPage";
 
-import { Helmet } from 'react-helmet';
-import SideEffect from "./components/SideEffect";
-
 function App() {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
@@ -39,7 +36,6 @@ function App() {
 
   return (
     <>
-    <SideEffect />
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />

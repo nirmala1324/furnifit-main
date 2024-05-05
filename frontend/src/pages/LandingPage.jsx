@@ -40,7 +40,7 @@ const LandingPage = () => {
         <div className="group-230">
           <div className={`nav ${isNavbarFixed ? "fixed" : ""}`}>
             <div className="elegant-logo-2"></div>
-            <NavLink to="/LandingPage" className="home">
+            <NavLink to="/" className="home">
               <strong>Home</strong>
             </NavLink>
             <NavLink to="/recommendation" className="recommendation">
