@@ -278,14 +278,16 @@ export const RecommendPage = () => {
   const [recommendData, setRecommendData] = useState([]);
   const recommendedRef = useRef(null);
 
+  const containerRef = useRef(null);
+
   useEffect(() => {
     // Disable scroll if recommendData is empty
     const handleScroll = () => {
-      if (recommendData.length === 0) {
+      if (containerRef.current && recommendData.length === 0) {
         window.scrollTo(0, 0);
-        document.body.style.overflow = "hidden";
+        containerRef.current.style.overflow = "hidden";
       } else {
-        document.body.style.overflow = "auto";
+        containerRef.current.style.overflow = "auto";
       }
     };
 
@@ -333,7 +335,7 @@ export const RecommendPage = () => {
 
   return (
     <>
-      <div className="furniture-page-revise">
+      <div className="furniture-page-revise" ref={containerRef}>
         <div className="group-230">
           <div className={`nav ${isNavbarFixed ? "fixed" : ""}`}>
             <div className="elegant-logo-2"></div>

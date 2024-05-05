@@ -139,7 +139,7 @@ const AboutUsPage = () => {
               </span>
             </div>
             <div className="nav-footerAU">
-              <Link to="/AboutUsPage" className="about-usAU">
+              <Link to="/about-us" className="about-usAU">
                 About Us
               </Link>
             </div>

@@ -191,7 +191,7 @@ const LandingPage = () => {
                 </span>
               </div>
               <div className="nav-footer">
-                <Link to="/AboutUsPage" className="about-us">
+                <Link to="/about-us" className="about-us">
                   About Us
                 </Link>
               </div>

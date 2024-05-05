@@ -39,6 +39,10 @@
   display: flex;
   flex-direction: column;
 
+  @include mobileStyles {
+    margin-top: 20px;
+  }
+
   .subtitle {
     color: #669286;
     font-size: 28px;
