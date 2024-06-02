@@ -183,10 +183,15 @@ const DetailFurniPage = () => {
                 </div>
               </div>
             </div>
-            <div className="desc-content">
+            <div className="desc-content underline">
               <div className="title2 subtitle">Description</div>
               <div className="underline"></div>
               <div className="desc-para">{furnitureData.furni_desc}</div>
+            </div>
+            <div className="desc-content detail-dimension">
+              <div className="title2 subtitle">Detail Dimension</div>
+              <div className="underline"></div>
+              <div className="desc-para">{furnitureData.detail_dimension}</div>
             </div>
           </div>
           <div className="detail-footer">

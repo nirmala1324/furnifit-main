@@ -195,7 +195,7 @@
     font-weight: 600;
 
     .underline {
-      margin-top: 10px;
+      margin-top: 0vw;
       background-color: #73976b;
       height: 4px;
       width: 156px;
@@ -211,6 +211,21 @@
       @include mobileStyles {
         margin-bottom: 45px;
       }
+    }
+  }
+
+  .desc-content.detail-dimension {
+    margin-top: -1vw;
+
+    .underline {
+      width: 15.5vw;
+      margin-top: 0vw;
+    }
+  }
+
+  .desc-content.underline {
+    .underline {
+      margin-top: 0vw;
     }
   }
 }
