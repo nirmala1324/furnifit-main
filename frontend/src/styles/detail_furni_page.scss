@@ -220,6 +220,10 @@
     .underline {
       width: 15.5vw;
       margin-top: 0vw;
+
+      @include mobileStyles {
+        width: 61vw;
+      }
     }
   }
 
