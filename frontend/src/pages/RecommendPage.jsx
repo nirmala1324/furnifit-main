@@ -1,68 +1,182 @@
+import React, { useState, useEffect, useRef } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import React, { useEffect, useState, useRef } from "react";
-import "../styles/recommend_page.scss";
 import axios from "axios";
+import "../styles/recommend_page.scss";
+import {
+  Button,
+  Chip,
+  Dialog,
+  DialogTitle,
+  DialogActions,
+  DialogContent,
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+  CardActionArea,
+} from "@mui/material";
+import { Close as CloseIcon, Menu as MenuIcon } from "@mui/icons-material";
 
-// Import Material UI
-import Button from "@mui/material/Button";
-import Chip from "@mui/material/Chip";
-import Dialog from "@mui/material/Dialog";
-import DialogTitle from "@mui/material/DialogTitle";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
 
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
+// Chip data structure
+const chip_data = {
+  Indoor: {
+    "Living Room": {
+      Modern: ["Coffee Table", "Armchair", "Sofa", "Drawer", "Stool", "Pouf"],
+      Classic: ["Sofa", "Armchair", "Desk"],
+      "Pop-Art": ["Coffee Table", "Sofa", "Dining Table", "Stool", "Chair"],
+      Classy: ["Cabinet", "Armchair", "Sofa", "Coffee Table"],
+      Industrial: ["Coffee Table"],
+      "Japanese Zen": ["Chair"],
+      "Tropical/Natural": ["TV Stand", "Stool"],
+      Traditional: ["Cabinet"],
+      "Shabby Chic": ["Cabinet"],
+      Scandinavian: ["Coffee Table"],
+      "Mid-Century Modern": ["Coffee Table", "Drawer", "Armchair"],
+      Minimalism: ["Coffee Table", "Sofa"],
+    },
+    Bedroom: {
+      Rustic: ["Cabinet"],
+      Industrial: ["Wardrobe"],
+      "Japanese Zen": ["Drawer"],
+      "Shabby Chic": ["Side Table", "Drawer"],
+      Scandinavian: ["Wardrobe", "Drawer", "Side Table"],
+      Minimalism: ["Dresser"],
+      "Tropical/Natural": ["Side Table"],
+      Classy: ["Wardrobe"],
+    },
+    "Dressing Room": {
+      Rustic: ["Wardrobe"],
+      Industrial: ["Wardrobe"],
+      "Japanese Zen": ["Wardrobe"],
+      Traditional: ["Wardrobe"],
+      "Shabby Chic": ["Wardrobe"],
+      Scandinavian: ["Dresser"],
+      Minimalism: ["Stool"],
+    },
+    "Dining Room": {
+      Classic: ["Dining Chair", "Dining Table"],
+      Rustic: ["Dining Table"],
+      Classy: ["Dining Table"],
+      Industrial: ["Dining Chair"],
+      "Japanese Zen": ["Dining Table"],
+      Traditional: ["Dining Table", "Dining Chair"],
+      "Mid-Century Modern": ["Cabinet"],
+    },
+    Bars: {
+      Rustic: ["Side Table"],
+    },
+    Bathroom: {
+      Rustic: ["Stool", "Cabinet"],
+      Classy: ["Cabinet"],
+      Industrial: ["Mirror"],
+      "Japanese Zen": ["Doormat"],
+    },
+    Kitchen: {
+      Industrial: ["Kitchen Island"],
+    },
+  },
+  Outdoor: {
+    Terrace: {
+      Industrial: ["Coffee Table"],
+      "Tropical/Natural": ["Side Table"],
+      Traditional: ["Armchair"],
+      Modern: ["Sofa", "Armchair"],
+    },
+    Garden: {
+      Rustic: ["Armchair"],
+      Classy: ["Seat/Bench"],
+      "Japanese Zen": ["Seat/Bench"],
+      "Tropical/Natural": ["Sofa"],
+      "Mid-Century Modern": ["Side Table"],
+    },
+    Balcony: {
+      Classy: ["Pouf", "Armchair"],
+      Traditional: ["Coffee Table"],
+      Minimalism: ["Pouf"],
+      Modern: ["Pouf"],
+    },
+  },
+  furni_material: [
+    "Wood",
+    "Fabric",
+    "Metal",
+    "Rubber",
+    "Glass",
+    "Bamboo",
+    "Plastic",
+    "Acrylic",
+    "Foam",
+    "Leather",
+    "Wax",
+    "Stone",
+  ],
+};
 
-// Material UI
-import CloseIcon from "@mui/icons-material/Close";
-import MenuIcon from "@mui/icons-material/Menu";
-
+// MODAL CHIP FORM RECOMMENDATION INPUT
 const ChipModal = ({ open, handleClose, receiveRecommendData }) => {
-  // Fungsi khusus untuk modal
-  const [fieldChips, setFieldChips] = useState({
-    space_category: [],
-    sub_space_category: [],
-    furni_style: [],
+  const [selectedChips, setSelectedChips] = useState({
+    space_category: null,
+    sub_space_category: null,
+    furni_style: null,
     furni_type: [],
     furni_material: [],
   });
 
-  const handleChipClick = (field, chip) => {
-    const updatedFieldChips = { ...fieldChips };
-    const index = updatedFieldChips[field].indexOf(chip);
-    if (index === -1) {
-      updatedFieldChips[field] = [...updatedFieldChips[field], chip];
-    } else {
-      updatedFieldChips[field] = updatedFieldChips[field].filter(
-        (c) => c !== chip
-      );
-    }
-    setFieldChips(updatedFieldChips);
+  const handleChipClick = (level, chip) => {
+    setSelectedChips((prev) => ({
+      ...prev,
+      [level]: chip,
+      ...(level === "space_category" && {
+        sub_space_category: null,
+        furni_style: null,
+        furni_type: [],
+      }),
+      ...(level === "sub_space_category" && {
+        furni_style: null,
+        furni_type: [],
+      }),
+      ...(level === "furni_style" && { furni_type: [] }),
+    }));
+  };
+
+  const handlefurni_typeChipClick = (chip) => {
+    setSelectedChips((prev) => ({
+      ...prev,
+      furni_type: prev.furni_type.includes(chip)
+        ? prev.furni_type.filter((c) => c !== chip)
+        : [...prev.furni_type, chip],
+    }));
+  };
+
+  const handlefurni_materialChipClick = (chip) => {
+    setSelectedChips((prev) => ({
+      ...prev,
+      furni_material: prev.furni_material.includes(chip)
+        ? prev.furni_material.filter((c) => c !== chip)
+        : [...prev.furni_material, chip],
+    }));
   };
 
   const handleResetChips = () => {
-    setFieldChips({
-      space_category: [],
-      sub_space_category: [],
-      furni_style: [],
+    setSelectedChips({
+      space_category: null,
+      sub_space_category: null,
+      furni_style: null,
       furni_type: [],
       furni_material: [],
     });
   };
 
   const handleSubmit = async () => {
-    console.log(fieldChips);
+    console.log(selectedChips);
     try {
       const response = await axios.post("https://backend-main-frf8.onrender.com/recommend", {
-        inputData: fieldChips,
+        inputData: selectedChips,
       });
       const recommendData = response.data.recommended_products;
       console.log(recommendData);
-      receiveRecommendData(recommendData); // Dapet data respon -> dikirim ke fungsi utama
+      receiveRecommendData(recommendData);
     } catch (error) {
       console.error("Error submitting data:", error);
     }
@@ -70,12 +184,7 @@ const ChipModal = ({ open, handleClose, receiveRecommendData }) => {
   };
 
   return (
-    <Dialog
-      open={open}
-      onClose={handleClose}
-      maxWidth="md" // Set to false to disable the maxWidth property
-      fullWidth={true}
-    >
+    <Dialog open={open} onClose={handleClose} maxWidth="md" fullWidth={true}>
       <DialogContent style={{ paddingInline: "40px" }}>
         <div className="modal-header">
           <div className="modal-title">Recommender System</div>
@@ -83,166 +192,129 @@ const ChipModal = ({ open, handleClose, receiveRecommendData }) => {
             In order to get your recommended furniture items, you only need to
             insert your preference based on necessary below.
           </div>
-          <div className="uderline-modal"></div>
+          <div className="underline-modal"></div>
         </div>
         <div className="modal-recommend-content">
-          <div className="left-recommend-container">
-            <div className="the-field">
-              <strong>Space Category</strong>
-              <div className="the-chips">
-                {["Outdoor", "Indoor"].map((chip) => (
+          <div className="the-field">
+            <strong>Space Category</strong>
+            <div className="the-chips">
+              {Object.keys(chip_data)
+                .filter((key) => key !== "furni_material")
+                .map((chip) => (
                   <Chip
                     sx={{ mr: 0.5, mt: 0.7 }}
                     key={chip}
                     label={chip}
                     clickable
                     color={
-                      fieldChips.space_category.includes(chip)
-                        ? "primary"
+                      selectedChips.space_category === chip
+                        ? "success"
                         : "default"
                     }
                     onClick={() => handleChipClick("space_category", chip)}
                   />
                 ))}
-              </div>
             </div>
+            <div className="separator"></div>
+          </div>
+          {selectedChips.space_category && (
             <div className="the-field">
               <strong>Sub Space Category</strong>
               <div className="the-chips">
-                {[
-                  "Bathroom",
-                  "Bedroom",
-                  "Garden",
-                  "Dining Room",
-                  "Dressing Room",
-                  "Living Room",
-                  "Kitchen",
-                  "Terrace",
-                  "Balcony",
-                  "Bars",
-                ].map((chip) => (
-                  <Chip
-                    sx={{ mr: 0.5, mt: 0.7 }}
-                    key={chip}
-                    label={chip}
-                    clickable
-                    color={
-                      fieldChips.sub_space_category.includes(chip)
-                        ? "primary"
-                        : "default"
-                    }
-                    onClick={() => handleChipClick("sub_space_category", chip)}
-                  />
-                ))}
+                {Object.keys(chip_data[selectedChips.space_category]).map(
+                  (chip) => (
+                    <Chip
+                      sx={{ mr: 0.5, mt: 0.7 }}
+                      key={chip}
+                      label={chip}
+                      clickable
+                      color={
+                        selectedChips.sub_space_category === chip
+                          ? "success"
+                          : "default"
+                      }
+                      onClick={() =>
+                        handleChipClick("sub_space_category", chip)
+                      }
+                    />
+                  )
+                )}
               </div>
+              <div className="separator"></div>
             </div>
+          )}
+          {selectedChips.sub_space_category && (
             <div className="the-field">
               <strong>Furniture Style</strong>
               <div className="the-chips">
-                {[
-                  "Modern",
-                  "Classy",
-                  "Minimalism",
-                  "Traditional",
-                  "Industrial",
-                  "Scandinavian",
-                  "Rustic",
-                  "Shabby Chic",
-                  "Classic",
-                  "Japanese Zen",
-                  "Mid-Century Modern",
-                  "Pop-Art",
-                  "Tropical/Natural",
-                ].map((chip) => (
+                {Object.keys(
+                  chip_data[selectedChips.space_category][
+                    selectedChips.sub_space_category
+                  ]
+                ).map((chip) => (
                   <Chip
                     sx={{ mr: 0.5, mt: 0.7 }}
                     key={chip}
                     label={chip}
                     clickable
                     color={
-                      fieldChips.furni_style.includes(chip)
-                        ? "primary"
-                        : "default"
+                      selectedChips.furni_style === chip ? "success" : "default"
                     }
                     onClick={() => handleChipClick("furni_style", chip)}
                   />
                 ))}
               </div>
+              <div className="separator"></div>
             </div>
-          </div>
-          <div className="right-recommend-container">
+          )}
+          {selectedChips.furni_style && (
             <div className="the-field">
               <strong>Furniture Type</strong>
               <div className="the-chips">
-                {[
-                  "Coffee Table",
-                  "Stool",
-                  "Drawer",
-                  "Armchair",
-                  "Sofa",
-                  "TV Stand",
-                  "Side Table",
-                  "Cabinet",
-                  "Wardrobe",
-                  "Mirror",
-                  "Dining Chair",
-                  "Pouf",
-                  "Doormat",
-                  "Desk",
-                  "Chair",
-                  "Dining Table",
-                  "Seat/Bench",
-                  "Kitchen Island",
-                  "Dresser",
-                ].map((chip) => (
+                {chip_data[selectedChips.space_category][
+                  selectedChips.sub_space_category
+                ][selectedChips.furni_style].map((chip) => (
                   <Chip
                     sx={{ mr: 0.5, mt: 0.7 }}
                     key={chip}
                     label={chip}
                     clickable
                     color={
-                      fieldChips.furni_type.includes(chip)
-                        ? "primary"
+                      selectedChips.furni_type.includes(chip)
+                        ? "success"
                         : "default"
                     }
-                    onClick={() => handleChipClick("furni_type", chip)}
+                    onClick={() => handlefurni_typeChipClick(chip)}
                   />
                 ))}
               </div>
+              <div className="separator"></div>
             </div>
-            <div className="the-field">
-              <strong>Furniture Material</strong>
-              <div className="the-chips">
-                {[
-                  "Wood",
-                  "Fabric",
-                  "Metal",
-                  "Rubber",
-                  "Glass",
-                  "Bamboo",
-                  "Plastic",
-                  "Acrylic",
-                  "Foam",
-                  "Leather",
-                  "Wax",
-                  "Stone",
-                ].map((chip) => (
-                  <Chip
-                    sx={{ mr: 0.5, mt: 0.7 }}
-                    key={chip}
-                    label={chip}
-                    clickable
-                    color={
-                      fieldChips.furni_material.includes(chip)
-                        ? "primary"
-                        : "default"
-                    }
-                    onClick={() => handleChipClick("furni_material", chip)}
-                  />
-                ))}
+          )}
+          {selectedChips.space_category &&
+            selectedChips.sub_space_category &&
+            selectedChips.furni_style && (
+              <div className="the-field">
+                <strong>Furniture Material</strong>
+                <div className="the-chips">
+                  {chip_data.furni_material.map((chip) => (
+                    <Chip
+                      sx={{ mr: 0.5, mt: 0.7 }}
+                      key={chip}
+                      label={chip}
+                      clickable
+                      color={
+                        selectedChips.furni_material.includes(chip)
+                          ? "success"
+                          : "default"
+                      }
+                      onClick={() => handlefurni_materialChipClick(chip)}
+                    />
+                  ))}
+                </div>
+                <div className="separator"></div>
               </div>
-            </div>
-          </div>
+            )}
         </div>
       </DialogContent>
       <DialogActions sx={{ padding: 2 }} style={{ justifyContent: "center" }}>
@@ -276,17 +348,13 @@ const ChipModal = ({ open, handleClose, receiveRecommendData }) => {
 };
 
 export const RecommendPage = () => {
-  // Fungsi utama
   const navigate = useNavigate();
-
   const [modalOpen, setModalOpen] = useState(false);
   const [recommendData, setRecommendData] = useState([]);
   const recommendedRef = useRef(null);
-
   const containerRef = useRef(null);
 
   useEffect(() => {
-    // Disable scroll if recommendData is empty
     const handleScroll = () => {
       if (containerRef.current && recommendData.length === 0) {
         window.scrollTo(0, 0);
@@ -296,7 +364,6 @@ export const RecommendPage = () => {
       }
     };
 
-    // Scroll to the recommended furniture section when data is available
     if (recommendData.length > 0 && recommendedRef.current) {
       recommendedRef.current.scrollIntoView({ behavior: "smooth" });
     }
@@ -316,7 +383,6 @@ export const RecommendPage = () => {
     setModalOpen(false);
   };
 
-  // Callback function to receive recommendData from ChipModal
   const receiveRecommendData = (data) => {
     setRecommendData(data);
   };
@@ -335,7 +401,6 @@ export const RecommendPage = () => {
   // navbar
   const [isNavbarFixed, setIsNavbarFixed] = useState(false);
 
-
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -344,7 +409,11 @@ export const RecommendPage = () => {
         <div className="group-230">
           <div className={`nav ${isNavbarFixed ? "fixed" : ""}`}>
             <div className="elegant-logo-2"></div>
-            <div onClick={() => navigate("/")} style={{cursor: "pointer"}} className="home">
+            <div
+              onClick={() => navigate("/")}
+              style={{ cursor: "pointer" }}
+              className="home"
+            >
               Home
             </div>
             <NavLink to="/recommendation" className="recommendation">
@@ -431,19 +500,19 @@ export const RecommendPage = () => {
             </div>
             <div className="the-result">
               <div>
+
                 <ChipModal
                   open={modalOpen}
                   handleClose={handleCloseModal}
                   onSubmit={handleFormSubmit}
                   receiveRecommendData={receiveRecommendData}
-                  setRecommendData={setRecommendData}
                 />
 
                 <div className="grid-container">
                   {recommendData.map((item) => (
                     <div
                       key={item.furni_id}
-                      class="grid-item"
+                      className="grid-item"
                       onClick={() => handleCardClick(item.furni_id)}
                     >
                       <Card
